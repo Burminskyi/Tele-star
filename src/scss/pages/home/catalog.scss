@@ -1,0 +1,131 @@
+.catalog {
+  .image {
+
+    width: 4.5rem;
+    height: 4.9rem;
+
+    transform: translateX(-.2rem);
+    @media all and (max-width: 992px) {
+      transform: none;
+      margin-left: auto;
+    }
+    @media all and (max-width: 576px) {
+      width: 2.53rem;
+      height: 2.79rem;
+    }
+
+  }
+
+  &__info {
+    height: 4.97rem;
+    display: flex;
+    align-items: center;
+    padding-left: .2rem;
+    @media all and (max-width: 992px) {
+      height: auto;
+      margin-top: .32rem;
+      padding-left: .16rem;
+    }
+
+    li {
+      margin-bottom: .24rem;
+      @media all and (max-width: 576px) {
+        margin-bottom: .18rem;
+      }
+
+      span:first-child {
+        margin-right: .08rem;
+      }
+
+      a {
+        padding-right: .5rem;
+        padding-bottom: .02rem;
+        transition: all .3s linear;
+
+        + .image {
+          display: none;
+        }
+
+        @media all and (min-width: 992px) {
+          + .image {
+            display: block;
+            position: absolute;
+            z-index: 2;
+            top: 0;
+            right: 0;
+            transform: translateX(calc(100% - .1rem));
+            opacity: 0;
+            transition: all .5s ease-in-out;
+
+            img {
+              object-fit: cover;
+            }
+          }
+          &::after {
+            content: '';
+            width: 6.66rem;
+            height: .01rem;
+            background-color: var(--accent);
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            opacity: 0;
+            transition: opacity .3s linear;
+          }
+          &:hover {
+            color: var(--accent);
+            transform: translateX(-.2rem);
+
+            &::after {
+              opacity: 1;
+            }
+
+            + .image {
+              opacity: 1;
+
+            }
+
+          }
+        }
+        @media all and (max-width: 576px) {
+          padding-right: 0;
+        }
+
+
+      }
+
+    }
+
+  }
+
+  .row {
+    @media all and (max-width: 992px) {
+      padding-top: .65rem;
+      flex-direction: column-reverse;
+      h2 {
+        top: 0;
+      }
+    }
+  }
+
+  &-item {
+
+
+    @media all and (max-width: 576px) {
+      &__btn {
+
+        width: .64rem;
+        height: .64rem;
+
+      }
+      &__footer {
+        grid-template-columns: 1fr .64rem;
+      }
+      .title {
+
+        font-size: .2rem;
+
+      }
+    }
+  }
+}

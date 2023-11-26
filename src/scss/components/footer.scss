@@ -1,0 +1,94 @@
+.footer {
+  padding: .8rem 0 .92rem;
+  background-color: var(--main);
+
+  position: relative;
+
+  &::before {
+    width: 100%;
+    height: gem(1);
+    top: 1.2rem;
+    left: 0;
+    content: '';
+    position: absolute;
+    background-color: var(--black);
+  }
+
+  @media all and (max-width: 576px) {
+    padding: .72rem 0 .88rem;
+    &::before {
+      top: 1rem;
+    }
+    .col-md-6 {
+      display: grid;
+      grid-template-columns: .94rem 1fr;
+      column-gap: .2rem;
+      margin-bottom: .4rem;
+
+    }
+  }
+
+  .logo {
+    width: 2.48rem;
+    height: .95rem;
+    transform: translateX(-.26rem) translateY(-.36rem);
+
+    + div {
+      transform: translateY(-.5rem);
+    }
+
+    @media all and (max-width: 576px) {
+      width: 2.06rem;
+      height: .78rem;
+      transform: translateX(-.16rem) translateY(-.36rem);
+    }
+  }
+
+  .title {
+    font-size: .2rem;
+
+    + ul {
+      a {
+        position: relative;
+
+        &::before {
+          width: 0;
+          height: gem(1);
+          bottom: 0;
+          left: 0;
+          content: '';
+          position: absolute;
+          background-color: var(--black);
+          transition: width .3s ease-in-out;
+        }
+
+        &:hover {
+          &::before {
+            width: 100%;
+          }
+
+        }
+      }
+    }
+  }
+
+  &__contacts {
+    margin-left: auto;
+    @media all and (max-width: 992px) {
+      margin-top: .32rem;
+      margin-left: 0;
+    }
+    @media all and (max-width: 576px) {
+      margin-top: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .item:first-child {
+        width: 100%;
+      }
+    }
+
+  }
+
+
+}

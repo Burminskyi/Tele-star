@@ -1,0 +1,54 @@
+<script src="js/app.min.js"></script>
+<script src="js/home.min.js"></script>
+<script src="js/catalog.min.js"></script>
+<!--<script>-->
+
+<!--    window.addEventListener('DOMContentLoaded', () => {-->
+<!--        const container2 = document.getElementById('motion');-->
+
+<!--        const animationPath2 = 'files/animation.json';-->
+
+<!--        if (animationPath2) {-->
+<!--            const animationData2 = {-->
+<!--                container: container2,-->
+<!--                // renderer: 'html',-->
+<!--                loop: false,-->
+<!--                autoplay: false,-->
+<!--                path: animationPath2,-->
+<!--            };-->
+<!--            const anim2 = lottie.loadAnimation(animationData2);-->
+<!--            const containerHeight = document.getElementById('motion').clientHeight;-->
+
+
+<!--            // anim2.addEventListener('DOMLoaded', () => {-->
+
+<!--            //     anim2.setSpeed(1); -->
+<!--            // });-->
+
+<!--            const controller = new ScrollMagic.Controller();-->
+<!--            let duration = '100%';-->
+<!--            const scene = new ScrollMagic.Scene({-->
+<!--                triggerElement: '#scroll-container',-->
+<!--                triggerHook: .75, -->
+<!--                duration: '100%',-->
+<!--            })-->
+<!--                .on('enter', (event) => {-->
+
+<!--                    const containerHeight = document.getElementById('motion').clientHeight;-->
+<!--                    scene.duration(containerHeight);-->
+
+
+<!--                })-->
+<!--                .on('progress', (event) => {-->
+
+<!--                    const progress = event.progress;-->
+<!--                    const currentFrame = anim2.totalFrames * progress;-->
+<!--                    anim2.goToAndStop(currentFrame, true);-->
+<!--                })-->
+<!--                .addIndicators() -->
+<!--                .addTo(controller);-->
+
+
+<!--        }-->
+<!--    })-->
+<!--</script>-->

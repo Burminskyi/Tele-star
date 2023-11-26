@@ -1,0 +1,34 @@
+.accordion {
+  margin-bottom: gem(24);
+
+  &__header {
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+
+    button {
+      transform: rotate(-90deg);
+      transition: transform 0.3s ease-out;
+
+    }
+
+    &.active {
+      button {
+        transform: rotate(-90deg) scale(-1, 1);
+      }
+
+      + .accordion__content {
+        margin: gem(24) 0;
+      }
+
+
+    }
+  }
+
+  &__content {
+    margin: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-out;
+
+  }
+}

@@ -1,0 +1,126 @@
+.dropdown {
+  position: relative;
+  width: 2.78rem;
+  @media all and (max-width: 576px) {
+    width: 100%;
+  }
+
+  &__list {
+    max-height: gem(200);
+    overflow-y: scroll;
+    @media (max-width: 576px) {
+      max-height: gem(150);
+    }
+  }
+
+  &__content {
+    top: 100%;
+
+    position: absolute;
+
+    background: var(--soft-white);
+    opacity: 0;
+    visibility: hidden;
+    transition: all .1s ease-in-out;
+    width: 100%;
+    border: gem(1) solid var(--black);
+    border-top: transparent;
+    z-index: 5;
+  }
+
+  &__item {
+    padding: .08rem .15rem;
+    line-height: normal;
+    cursor: pointer;
+    width: auto;
+    position: relative;
+    transition: all .35s linear;
+
+    &:first-child {
+      padding-top: gem(14);
+      padding-bottom: .09rem;
+    }
+
+    &:last-child {
+      padding-bottom: .2rem;
+    }
+
+
+    &:hover {
+      background-color: var(--accent-light);
+    }
+
+
+    &.active {
+      background-color: var(--main);
+
+      pointer-events: none;
+
+    }
+  }
+
+  &__btn {
+    cursor: pointer;
+    padding: .08rem .08rem .08rem .16rem;
+    height: gem(40);
+    text-align: center;
+    transition: all .35s linear;
+    align-items: center;
+    border: gem(1) solid var(--black);
+
+
+    .icon-left {
+      transform: rotate(-90deg);
+      transition: transform .35s linear;
+    }
+
+  }
+
+  &__active {
+    margin-right: .05rem;
+    text-align: center;
+
+  }
+
+  @media (min-width: 1025px) {
+    &:hover {
+      .dropdown {
+
+        &__btn {
+          border-color: #303535;
+
+          .icon-left {
+            transform: rotate(-90deg) scale(-1, 1);
+          }
+        }
+
+        &__content {
+          visibility: visible;
+          opacity: 1;
+
+        }
+      }
+    }
+  }
+
+  &.active {
+    .dropdown {
+
+      &__btn {
+
+
+        .icon-down {
+          transform: scale(1, -1) translateY(gem(4));
+        }
+      }
+
+      &__content {
+        visibility: visible;
+        opacity: 1;
+        z-index: 5;
+      }
+    }
+  }
+
+
+}

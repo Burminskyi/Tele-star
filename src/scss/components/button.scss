@@ -1,0 +1,63 @@
+.btn {
+  padding: 0 gem(40);
+  background-color: transparent;
+  line-height: normal;
+  text-align: center;
+  transition: all 0.45s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  width: max-content;
+  height: .52rem;
+  font-weight: 500;
+  font-size: var(--btn);
+  letter-spacing: gem(2.48);
+  flex-shrink: 0;
+  z-index: 1;
+  position: relative;
+
+  &_100 {
+    width: 100%;
+  }
+
+  //@media all and (max-width: 576px) {
+  //  width: 100%;
+  //}
+
+  &__fill {
+    background-color: var(--accent);
+    padding: 0 gem(32);
+    border: gem(2) solid var(--accent);
+    color: var(--white);
+
+    &:hover {
+      background-color: transparent;
+      border-color: var(--black);
+      color: var(--black);
+    }
+  }
+
+  &__outline {
+    color: var(--black);
+    border: .02rem solid var(--black);
+    &:hover {
+      color: var(--white);
+      border-color: var(--black);
+      background-color: var(--black);
+    }
+    &_white{
+      border: .02rem solid var(--white);
+      color: var(--white);
+      &:hover {
+        color: var(--accent);
+        border-color: var(--white);
+        background-color: var(--white);
+      }
+    }
+  }
+}
+
+
+

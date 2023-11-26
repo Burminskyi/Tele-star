@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="uk" xmlns="http://www.w3.org/1999/html">
+@@include('html/_head.htm',{
+"title":"Їй Потрібна Броня | БФ 'Місія Свободи'"
+})
+<body class="body">
+<div class="page-container">
+    @@include('html/_header.htm',{})
+    <main class="catalog-page" data-catalog="shop">
+        <div class="container">
+            <ul class="breadcrumbs flex">
+                <li><a href="#">Головна</a></li>
+                <li class="f-weight_500">Каталог</li>
+
+            </ul>
+        </div>
+        <section class="pos-r">
+            <div class="container ">
+                <div class="row --just-between --align-center ">
+                    <div class="col-md-4 col-lg-3">
+                        <h1 class="h2 text-uppercase">
+                            Каталог
+                        </h1>
+                    </div>
+                    <div class="col-lg-3 col-md-8">
+                        <div class="flex --align-center">
+                            <div class="dropdown">
+                                <div class="dropdown__btn flex --just-between --align-center">
+                                <span class="dropdown__active f-size_m " data-active="" data-selected="">
+                                    Сортувати за замовчуванням
+                                </span>
+                                    <span class="icon-left icon-24"></span>
+                                </div>
+                                <div class="dropdown__content ">
+                                    <ul class="dropdown__list f-size_m">
+                                        <li class="dropdown__item active">Сортувати за замовчуванням</li>
+                                        <li class="dropdown__item ">Сортувати за популярністю</li>
+                                        <li class="dropdown__item ">Ціна від нижчої до вищої</li>
+                                        <li class="dropdown__item ">Ціна від вищої до нижчої</li>
+                                        <li class="dropdown__item ">Нові надходження</li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <button class="filter-btn --align-center --just-center pos-r selected">
+
+                                <span class="icon-filter icon-24"></span>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="catalog__filter pos-r">
+                    <div class="row ">
+                        <div class="col-lg-3">
+                            <form class=" filter">
+                                <div class="filter__header --align-center --just-between">
+                                    <div class="f-weight_500 text-uppercase">
+                                        Фільтри
+                                    </div>
+                                    <button type="button" class="filter__close">
+                                        <span class="icon-close icon-24"></span>
+                                    </button>
+                                </div>
+                                <div class="price mb_32" data-range>
+                                    <div class="f-weight_500 text-uppercase">
+                                        Ціна
+                                    </div>
+                                    <div class="price__range">
+                                        <label>
+                                            <input
+                                                    type="range"
+                                                    min="300"
+                                                    max="2100"
+                                                    value="300"
+                                                    step="100"
+                                            >
+                                        </label>
+                                        <div class="flex --align-center --just-between">
+                                            <div class="price__min f-size_m"><span data-current>300</span> грн</div>
+                                            <div class="price__max f-size_m"><span>2100</span> грн</div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="item accordion filter-accordion ">
+
+                                    <div class="filter-accordion__header accordion__header  flex --align-center --just-between">
+
+                                        <div class="f-weight_500 text-uppercase">Категорії</div>
+                                        <button type="button" class="flex-inline --align-center --just-center ">
+                                            <span class="icon-24 icon-left"></span>
+                                        </button>
+                                    </div>
+                                    <div class="filter-accordion__content accordion__content">
+                                        <div class="checkbox flex --align-center ">
+                                            <label>
+                                                <input type="checkbox"/>
+                                            </label>
+                                            <div class="box flex --align-center --just-center">
+                                                <span class="icon-24 icon-done"></span>
+                                            </div>
+                                            <div class="title f-size_m">
+                                                Всі
+
+
+                                            </div>
+
+
+                                        </div>
+                                        <div class="checkbox flex --align-center">
+                                            <label>
+                                                <input type="checkbox"/>
+                                            </label>
+                                            <div class="box flex --align-center --just-center">
+                                                <span class="icon-24 icon-done"></span>
+                                            </div>
+                                            <div class="title f-size_m">
+                                                Комплекти
+
+
+                                            </div>
+
+                                            <div class="count f-size_m">10</div>
+
+
+                                        </div>
+                                        <div class="checkbox flex --align-center">
+                                            <label>
+                                                <input type="checkbox"/>
+                                            </label>
+                                            <div class="box flex --align-center --just-center">
+                                                <span class="icon-24 icon-done"></span>
+                                            </div>
+                                            <div class="title f-size_m">
+                                                Штани та шорти
+
+
+                                            </div>
+
+                                            <div class="count f-size_m">16</div>
+
+
+                                        </div>
+                                        <div class="checkbox flex --align-center">
+                                            <label>
+                                                <input type="checkbox"/>
+                                            </label>
+                                            <div class="box flex --align-center --just-center">
+                                                <span class="icon-24 icon-done"></span>
+                                            </div>
+                                            <div class="title f-size_m">
+                                                Кофти та топи
+
+
+                                            </div>
+
+                                            <div class="count f-size_m">3</div>
+
+
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+                                <div class="item accordion filter-accordion ">
+
+                                    <div class="filter-accordion__header accordion__header  flex --align-center --just-between">
+                                        <div class="f-weight_500 text-uppercase">Розмір</div>
+                                        <button type="button" class="flex-inline --align-center --just-center ">
+                                            <span class="icon-24 icon-left"></span>
+                                        </button>
+                                    </div>
+                                    <div class="filter-accordion__content accordion__content">
+                                        <div class="checkbox flex --align-center ">
+                                            <label>
+                                                <input type="checkbox"/>
+                                            </label>
+                                            <div class="box flex --align-center --just-center">
+                                                <span class="icon-24 icon-done"></span>
+                                            </div>
+                                            <div class="title f-size_m">
+                                                ВСІ
+
+
+                                            </div>
+
+
+                                        </div>
+                                        <div class="checkbox flex --align-center">
+                                            <label>
+                                                <input type="checkbox"/>
+                                            </label>
+                                            <div class="box flex --align-center --just-center">
+                                                <span class="icon-24 icon-done"></span>
+                                            </div>
+                                            <div class="title f-size_m">
+                                                XS
+
+                                                (<span class="count f-size_m">10</span>)
+                                            </div>
+
+
+                                        </div>
+                                        <div class="checkbox flex --align-center">
+                                            <label>
+                                                <input type="checkbox"/>
+                                            </label>
+                                            <div class="box flex --align-center --just-center">
+                                                <span class="icon-24 icon-done"></span>
+                                            </div>
+                                            <div class="title f-size_m">
+                                                S
+
+                                                (<span class="count f-size_m">14</span>)
+                                            </div>
+
+
+                                        </div>
+                                        <div class="checkbox flex --align-center">
+                                            <label>
+                                                <input type="checkbox"/>
+                                            </label>
+                                            <div class="box flex --align-center --just-center">
+                                                <span class="icon-24 icon-done"></span>
+                                            </div>
+                                            <div class="title f-size_m">
+                                                M
+
+                                                (<span class="count f-size_m">12</span>)
+                                            </div>
+
+
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+                                <button type="submit" class="btn btn__outline btn_100">фільтрувати</button>
+                            </form>
+                        </div>
+                        <div class="col-lg-9">
+                            <div class="catalog__items">
+                                <div class="catalog-item ">
+                                    <a href="" class="image mb_16 flex overflow fit-cover">
+                                        <img src="@img/product-1.png" alt="">
+                                    </a>
+                                    <div class="catalog-item__footer">
+                                        <div class="info">
+                                            <a href="" class="title h5 ">Халат Tender</a>
+                                            <div class="price f-size_l">1600 грн</div>
+                                        </div>
+                                        <a href="#" class="catalog-item__btn flex --align-center --just-center">
+                                            <span class="icon-bag icon-24"></span>
+                                        </a>
+                                    </div>
+
+
+                                </div>
+                                <div class="catalog-item ">
+                                    <a href="" class="image mb_16 flex overflow fit-cover">
+                                        <img src="@img/product-2.png" alt="">
+                                    </a>
+                                    <div class="catalog-item__footer">
+                                        <div class="info">
+                                            <a href="" class="title h5 ">Халат Tender</a>
+                                            <div class="price f-size_l">1600 грн</div>
+                                        </div>
+                                        <a href="#" class="catalog-item__btn flex --align-center --just-center">
+                                            <span class="icon-bag icon-24"></span>
+                                        </a>
+                                    </div>
+
+
+                                </div>
+                                <div class="catalog-item ">
+                                    <a href="" class="image mb_16 flex overflow fit-cover">
+                                        <img src="@img/product-3.png" alt="">
+                                    </a>
+                                    <div class="catalog-item__footer">
+                                        <div class="info">
+                                            <a href="" class="title h5 ">Халат Tender</a>
+                                            <div class="price f-size_l">1600 грн</div>
+                                        </div>
+                                        <a href="#" class="catalog-item__btn flex --align-center --just-center">
+                                            <span class="icon-bag icon-24"></span>
+                                        </a>
+                                    </div>
+
+
+                                </div>
+                                <div class="catalog-item ">
+                                    <a href="" class="image mb_16 flex overflow fit-cover">
+                                        <img src="@img/product-2.png" alt="">
+                                    </a>
+                                    <div class="catalog-item__footer">
+                                        <div class="info">
+                                            <a href="" class="title h5 ">Халат Tender</a>
+                                            <div class="price f-size_l">1600 грн</div>
+                                        </div>
+                                        <a href="#" class="catalog-item__btn flex --align-center --just-center">
+                                            <span class="icon-bag icon-24"></span>
+                                        </a>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+
+    </main>
+
+    @@include('html/_footer.htm',{})
+</div>
+@@include('html/_modal.htm',{})
+@@include('html/_svg.htm',{})
+@@include('html/_js.htm',{})
+</body>
+</html>

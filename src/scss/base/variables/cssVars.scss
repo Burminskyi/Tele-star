@@ -1,0 +1,21 @@
+
+@import "typography";
+@import "colors";
+:root {
+  --header-height: #{gem(89)};
+  --header-height-decrement: #{gem(-89)};
+  --container-gap: #{gem(54)};
+  --container-gap-decrement: #{gem(-54)};
+  --section-padding: #{gem(70)};
+  --section-padding-decrement: #{gem(-70)};
+  @media all and (max-width: 992px) {
+
+    --section-padding: #{gem(50)};
+    --section-padding-decrement: #{gem(-50)};
+  }
+  @media all and (max-width: 576px) {
+    --container-gap: #{gem(16)};
+    --container-gap-decrement: #{gem(-16)};
+  }
+
+}

@@ -1,0 +1,17 @@
+.breadcrumbs {
+  li {
+    @include notLast() {
+      position: relative;
+      padding-right: var(--body-size);
+      &::before{
+        width: var(--body-size);
+        height: 100%;
+        top: 0;
+        right: 0;
+        content: '/';
+        position: absolute;
+        text-align: center;
+      }
+    }
+  }
+}

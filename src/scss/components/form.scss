@@ -1,0 +1,132 @@
+.form {
+
+
+  &__item {
+    margin-bottom: .16rem;
+
+    label {
+      display: inline-block;
+      margin-bottom: .04rem;
+      transition: all .3s ease-in-out;
+    }
+
+    position: relative;
+
+    input, textarea {
+      padding-bottom: .2rem;
+      transition: all .35s linear;
+      background-color: transparent;
+      font-size: var(--font-size-h4);
+      width: 100%;
+      border-bottom: gem(1) solid var(--light-grey);
+
+
+      &::placeholder {
+        color: var(--gray);
+
+      }
+
+      &:hover {
+
+
+      }
+
+      &:focus, &:active, &:focus-within {
+
+
+        &::placeholder {
+          //color: $sw60;
+        }
+      }
+
+
+    }
+
+
+    textarea {
+      resize: none;
+      height: gem(136);
+    }
+
+    &.disabled {
+      input {
+        background-color: rgba(48, 53, 53, 0.10);
+        border-color: rgba(48, 53, 53, 0.10);
+      }
+    }
+
+    &.valid {
+      input {
+        //border-color: $black;
+      }
+    }
+
+    &.invalid {
+      .form__message {
+        color: var(--red);
+      }
+
+      color: var(--red);
+
+      input {
+        color: var(--red);
+        border-color: var(--red);
+      }
+    }
+
+
+  }
+
+  &__input {
+    font-size: var(--body-size);
+    height: .45rem;
+  }
+
+  &__btn {
+    grid-column: 2 / 3;
+    margin-top: auto;
+
+    .btn {
+      width: 100%;
+    }
+
+    @media all and (max-width: 576px) {
+      grid-column: 1 / 2;
+      padding-top: .24rem;
+    }
+  }
+
+  &__message {
+    position: absolute;
+    font-size: var(--body-size);
+    line-height: 150%;
+    top: 0;
+  }
+
+
+  .btn__spinner {
+    height: 0.24rem;
+    width: 0.24rem;
+  }
+
+  &__answer {
+    height: 3.8rem;
+    border: 0.01rem solid var(--gray);
+    transition: all .3s ease-in-out;
+
+    &.hide {
+      max-height: 0;
+    }
+
+    .show {
+      max-height: 100%;
+    }
+
+    h3 + div {
+      width: 2.88rem;
+
+
+    }
+  }
+
+}
