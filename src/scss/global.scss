@@ -65,3 +65,34 @@
 [disabled] {
   opacity: .3;
 }
+
+
+.link {
+
+  position: relative;
+
+  &::before {
+    width: 0;
+    height: gem(1);
+    bottom: 0;
+    left: 0;
+    content: '';
+    position: absolute;
+    background-color: var(--black);
+    transition: width .3s ease-in-out;
+  }
+
+  &-white {
+    &::before {
+      background-color: var(--white);
+    }
+  }
+
+  &:hover {
+    &::before {
+      width: 100%;
+    }
+
+  }
+
+}

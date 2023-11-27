@@ -9,6 +9,10 @@ import initRange from "../modules/rangeInput.js";
 
 window.addEventListener("DOMContentLoaded", () => {
     try {
+        //TOdo remove if
+        if (!getElement('.catalog-page')) return
+
+
         //Init modules start
         dropdown();
         initRange();

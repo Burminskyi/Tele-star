@@ -1,0 +1,88 @@
+.additional {
+  h2 {
+    @media all and (max-width: 992px) {
+      margin-bottom: .24rem;
+    }
+  }
+
+  .swiper {
+   padding-top: .54rem;
+    @media all and (max-width: 992px) {
+      padding-top: .46rem;
+    }
+  }
+
+  &__banner {
+    width: 100%;
+    height: .65rem;
+    padding: 0 .75rem;
+    background-color: var(--accent-light);
+    display: flex;
+    align-items: center;
+    position: relative;
+    @media all and (max-width: 576px) {
+      padding: 0 .12rem;
+    }
+
+    .f-size_l {
+      max-width: 3.56rem;
+      @media all and (max-width: 576px) {
+        max-width: 2.93rem;
+      }
+    }
+
+    &::before, &::after {
+
+
+      right: 0;
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-style: solid;
+
+
+    }
+
+    &::before {
+      border-width: 0 .3rem .2rem 0;
+      top: 0;
+      border-color: transparent var(--soft-white) transparent transparent;
+      @media all and (max-width: 576px) {
+        border-width: 0 .25rem .2rem 0;
+      }
+    }
+
+    &::after {
+      bottom: 0;
+      border-width: 0 0 .2rem .3rem;
+      border-color: transparent transparent var(--soft-white) transparent;
+      @media all and (max-width: 576px) {
+        border-width: 0 0 .2rem .25rem;
+      }
+    }
+
+    .decor {
+      width: .12rem;
+      height: .12rem;
+      border-radius: 50%;
+      background-color: var(--soft-white);
+      right: .245rem;
+      @media all and (max-width: 576px) {
+        right: .09rem;
+      }
+    }
+  }
+
+  .swiper-navigation {
+    margin-top: .32rem;
+  }
+
+  .catalog-item {
+    @media all and (max-width: 576px) {
+      .image {
+        height: 3.51rem;
+      }
+    }
+  }
+}

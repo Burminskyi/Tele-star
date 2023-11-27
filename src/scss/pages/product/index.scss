@@ -1,0 +1,8 @@
+.product-page {
+  .breadcrumbs {
+    margin-bottom: .4rem;
+  }
+
+  @import "product";
+  @import "additional";
+}

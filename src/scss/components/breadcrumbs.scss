@@ -3,7 +3,7 @@
     @include notLast() {
       position: relative;
       padding-right: var(--body-size);
-      &::before{
+      &::before {
         width: var(--body-size);
         height: 100%;
         top: 0;
@@ -12,6 +12,10 @@
         position: absolute;
         text-align: center;
       }
+    }
+
+    &:last-child {
+      cursor: default;
     }
   }
 }

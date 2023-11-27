@@ -5,6 +5,7 @@ window['FLS'] = true;
 // Підключення основного файлу стилів
 import "../scss/style.scss";
 import 'swiper/css';
+import 'swiper/css/effect-fade';
 
 
 import * as flsFunctions from "./core/functions.js";

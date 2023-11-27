@@ -38,7 +38,6 @@ function instagramSlider() {
 
             },
         });
-        console.log(getElements('[data-swiper="instagram"] .swiper-slide').length, screen.availWidth)
         if (getElements('[data-swiper="instagram"] .swiper-slide').length <= 3 && screen.availWidth > 576) {
             getElement('[data-swiper="instagram"] .swiper-navigation').classList.add('hide')
         }
