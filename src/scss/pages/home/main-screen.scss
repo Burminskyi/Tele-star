@@ -6,7 +6,7 @@
   padding-bottom: 1.67rem;
   background: url('@img/main-bg.png') no-repeat center  / cover;
   @media all and (max-width: 576px) {
-    background: none;
+    background: none!important;
     flex-direction: column;
     padding-bottom: .5rem;
     height: auto;

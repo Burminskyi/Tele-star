@@ -83,10 +83,11 @@
 		"webpack-stream": "latest"
 	},
 	"dependencies": {
-		"imask": "^6.4.3",
 		"gsap": "^3.12.2",
 		"gulp-cheerio": "^1.0.0",
+		"imask": "^6.4.3",
 		"isotope-layout": "^3.0.6",
+		"perfect-scrollbar": "^1.5.5",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"simplebar": "latest"

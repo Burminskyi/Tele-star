@@ -49,6 +49,8 @@ const config = {
 		home: `${paths.src}/js/pages/home.js`,
 		catalog: `${paths.src}/js/pages/catalog.js`,
 		product: `${paths.src}/js/pages/product.js`,
+		checkout: `${paths.src}/js/pages/checkout.js`,
+		text: `${paths.src}/js/pages/text.js`,
 	},
 	output: {
 		path: `${paths.build}`,

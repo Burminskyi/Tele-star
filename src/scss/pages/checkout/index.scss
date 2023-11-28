@@ -1,0 +1,135 @@
+.checkout-page {
+  section {
+    margin-top: .45rem;
+    @media all and (max-width: 576px) {
+      margin-top: .32rem;
+    }
+
+    .row {
+      @media all and (max-width: 992px) {
+        flex-direction: column-reverse;
+      }
+    }
+  }
+
+  .checkout {
+    &-accordion {
+      &__header {
+        display: none;
+        border: gem(1) solid var(--black);
+        height: .4rem;
+        padding: 0 .08rem 0 .16rem;
+        @media all and (max-width: 992px) {
+          display: flex;
+        }
+      }
+
+      &__content {
+        overflow: visible;
+        max-height: 100%;
+        @media all and (max-width: 992px) {
+          overflow: hidden;
+          max-height: 0;
+          margin-top: 0 !important;
+
+        }
+      }
+    }
+
+    &__cart {
+      padding: .32rem .32rem .32rem 0;
+      position: relative;
+
+      &::before {
+        width: calc(100% + .2rem);
+        height: 100%;
+        top: 0;
+        left: -.2rem;
+        content: '';
+        position: absolute;
+        background-color: #fff;
+        z-index: -1;
+      }
+
+      @media all and (max-width: 992px) {
+        padding: .2rem .05rem .32rem;
+      }
+    }
+
+    .title {
+      div:first-child {
+        width: .5rem;
+        height: .5rem;
+        border-radius: 50%;
+        background-color: var(--accent-light);
+        margin-right: .12rem;
+      }
+    }
+
+
+    .checkbox {
+      flex-shrink: 0;
+      margin-bottom: 0;
+
+      &.w-100 {
+        width: 100%;
+      }
+
+      &.mb_24 {
+        margin-bottom: .24rem;
+      }
+
+    }
+
+    .dropdown {
+      width: 100%;
+
+      &__btn {
+        height: .5rem;
+      }
+
+      &__item {
+        input {
+          padding: 0;
+          background-color: transparent;
+        }
+      }
+    }
+
+    @media all and (max-width: 576px) {
+      .form__row {
+        .checkbox {
+          width: 100%;
+        }
+      }
+      [data-delivery] {
+
+        justify-content: start;
+
+        .checkbox {
+          width: auto;
+
+          &:first-child {
+            margin-right: .7rem;
+
+          }
+        }
+
+      }
+      [data-delivery-items] {
+        flex-direction: column;
+
+        .checkbox {
+          margin-right: 0;
+          margin-bottom: .16rem;
+        }
+      }
+      [data-policy] {
+        .checkbox {
+          align-items: start;
+        }
+      }
+    }
+
+  }
+}

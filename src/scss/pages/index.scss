@@ -3,9 +3,14 @@
 @import "about";
 @import "catalog";
 @import "product";
+@import "cart";
+@import "checkout";
+@import "text";
+@import "success";
+@import "size";
 
 
-.page{
+.page {
   padding-top: calc(var(--header-height) + .28rem);
   padding-bottom: 1.3rem;
   @media all and (max-width: 576px) {

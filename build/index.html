@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20231127111104">
+	<link rel="stylesheet" href="css/style.min.css?_v=20231129012215">
 	<link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
@@ -28,7 +28,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap&_v=20231127111104" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap&_v=20231129012215" rel="stylesheet">
 	<script>
 		let path = 'dfasd;'
 	</script>
@@ -53,8 +53,8 @@
 							<ul>
 								<li><a href="about.html">Про нас</a></li>
 								<li><a href="catalog.html">Каталог</a></li>
-								<li><a href="#">Колекції</a></li>
-								<li><a href="#">Доставка і оплата</a></li>
+								<li><a href="collection.html">Колекції</a></li>
+								<!--                        <li><a href="#" >Доставка і оплата</a></li>-->
 								<li><a href="contacts.html">Контакти</a></li>
 							</ul>
 						</nav>
@@ -393,11 +393,11 @@
 							МЕНЮ
 						</div>
 						<ul class="f-size_m">
-							<li class="mb_16"><a href="#">Про нас</a></li>
-							<li class="mb_16"><a href="#">Каталог</a></li>
-							<li class="mb_16"><a href="#">Колекції</a></li>
-							<li class="mb_16"><a href="#">Доставка і оплата</a></li>
-							<li><a href="#">Контакти</a></li>
+							<li class="mb_16"><a href="about.html">Про нас</a></li>
+							<li class="mb_16"><a href="catalog.html">Каталог</a></li>
+							<li class="mb_16"><a href="collection.html">Колекції</a></li>
+							<li class="mb_16"><a href="text.html">Доставка і оплата</a></li>
+							<li><a href="contacts.html">Контакти</a></li>
 						</ul>
 					</div>
 					<div class="col-md-6 col-lg-2 ">
@@ -405,8 +405,8 @@
 							КОРИСНЕ
 						</div>
 						<ul class="f-size_m">
-							<li class="mb_16"><a href="#">Питання/відповіді</a></li>
-							<li class="mb_16"><a href="#">Обрати розмір</a></li>
+							<li class="mb_16"><a href="result.html">Питання/відповіді</a></li>
+							<li class="mb_16"><a href="size.html">Обрати розмір</a></li>
 							<li class="mb_16"><a href="#">Політика конфіденційності</a></li>
 							<li class=""><a href="#">Договір оферти</a></li>
 
@@ -454,10 +454,10 @@
 
 		</footer>
 	</div>
-	<div data-fullscreen class="modal  hide  ">
+	<div data-fullscreen class="modal hide ">
 		<div class="modal__wrapper pos-r">
-			<div class="modal__body pos-r ">
-				<div class="modal__content w-100">
+			<div class="modal__body pos-r text-center ">
+				<div class="modal__content w-100 flex --dir-col --align-center --just-center">
 
 				</div>
 				<button type="button" class="modal__close pos-a">
@@ -465,6 +465,142 @@
 				</button>
 			</div>
 		</div>
+	</div>
+	<div id="cart" class="cart">
+		<div class="cart__header flex --align-center --just-between mb_32">
+			<div class="title flex --align-center ">
+				<div class="h5 text-uppercase f-weight_400">
+					у кошику
+				</div>
+				<div class="quantity f-size_m flex --align-center --just-center">3</div>
+			</div>
+			<div class="cart__close" data-cart-close>
+				<span class="icon-32 icon-close"></span>
+			</div>
+		</div>
+		<div class="cart__items " id="scrollbar">
+			<div class="cart-item">
+				<div class="image fit-cover">
+					<picture><source srcset="img/product-1.webp" type="image/webp"><img src="img/product-1.png" alt=""></picture>
+				</div>
+				<div class="info f-weight_500">
+					<div class="cart-item__header mb_8 flex --just-between --align-center">
+						<div class=" f-size_l">
+							ХАЛАТ TENDER
+						</div>
+						<button type="button" class="delete">
+							<span class="icon-delete icon-24 f-weight_400"></span>
+						</button>
+					</div>
+					<div class="f-size_m">
+						Молочний
+					</div>
+					<div class="size mr_24 active text-uppercase f-size_m pos-r flex --align-center --just-center">s</div>
+					<div class="flex">
+						<span>1</span> <span>x</span> <span>1600 ГРН</span>
+					</div>
+
+				</div>
+			</div>
+			<div class="cart-item">
+				<div class="image fit-cover">
+					<picture><source srcset="img/product-2.webp" type="image/webp"><img src="img/product-2.png" alt=""></picture>
+				</div>
+				<div class="info f-weight_500">
+					<div class="cart-item__header mb_8 flex --just-between --align-center">
+						<div class=" f-size_l">
+							Штани TENDER
+						</div>
+						<button type="button">
+							<span class="icon-delete icon-24 f-weight_400"></span>
+						</button>
+					</div>
+					<div class="f-size_m">
+						Молочний
+					</div>
+					<div class="size mr_24 active text-uppercase f-size_m pos-r flex --align-center --just-center">s</div>
+					<div class="flex">
+						<span>1</span> <span>x</span> <span>1600 ГРН</span>
+					</div>
+
+				</div>
+			</div>
+			<div class="cart-item">
+				<div class="image fit-cover">
+					<picture><source srcset="img/product-3.webp" type="image/webp"><img src="img/product-3.png" alt=""></picture>
+				</div>
+				<div class="info f-weight_500">
+					<div class="cart-item__header mb_8 flex --just-between --align-center">
+						<div class=" f-size_l">
+							Штани TENDER
+						</div>
+						<button type="button">
+							<span class="icon-delete icon-24 f-weight_400"></span>
+						</button>
+					</div>
+					<div class="f-size_m">
+						Молочний
+					</div>
+					<div class="size mr_24 active text-uppercase f-size_m pos-r flex --align-center --just-center">s</div>
+					<div class="flex">
+						<span>1</span> <span>x</span> <span>1600 ГРН</span>
+					</div>
+
+				</div>
+			</div>
+			<div class="cart-item">
+				<div class="image fit-cover">
+					<picture><source srcset="img/product-1.webp" type="image/webp"><img src="img/product-1.png" alt=""></picture>
+				</div>
+				<div class="info f-weight_500">
+					<div class="cart-item__header mb_8 flex --just-between --align-center">
+						<div class=" f-size_l">
+							ХАЛАТ TENDER
+						</div>
+						<button type="button">
+							<span class="icon-delete icon-24 f-weight_400"></span>
+						</button>
+					</div>
+					<div class="f-size_m">
+						Молочний
+					</div>
+					<div class="size mr_24 active text-uppercase f-size_m pos-r flex --align-center --just-center">s</div>
+					<div class="flex">
+						<span>1</span> <span>x</span> <span>1600 ГРН</span>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="cart__footer ">
+			<div class="amount mb_24-16 f-weight_500">
+				<span class="mr_16 f-size_m">Разом до сплати:</span><span class="f-size_l"> 2900 грн</span>
+			</div>
+			<div class="cart__btns flex">
+
+				<a href="cart.html" class="btn btn__outline ">редагувати</a>
+				<a href="" class="btn btn__fill ">Оформити замовлення</a>
+			</div>
+		</div>
+	</div>
+	<div id="cart-empty" class="cart cart-empty">
+		<div class="cart__header flex --align-center --just-between mb_32">
+			<div class="title flex --align-center ">
+				<div class="h5 text-uppercase f-weight_400">
+					у кошику
+				</div>
+
+			</div>
+			<div class="cart__close" data-cart-close>
+				<span class="icon-32 icon-close"></span>
+			</div>
+		</div>
+		<div class="cart__empty flex --align-center --just-between">
+			<div class="f-size_l f-weight_500 text-color_grey">Кошик пустий</div>
+			<button class="btn btn__fill" data-cart-close>продовжити покупки</button>
+		</div>
+
+
 	</div>
 	<svg width="0" height="0" class="none">
 
@@ -531,10 +667,12 @@
 
 
 
-	<script src="js/app.min.js?_v=20231127111104"></script>
-	<script src="js/home.min.js?_v=20231127111104"></script>
-	<script src="js/catalog.min.js?_v=20231127111104"></script>
-	<script src="js/product.min.js?_v=20231127111104"></script>
+	<script src="js/app.min.js?_v=20231129012215"></script>
+	<script src="js/home.min.js?_v=20231129012215"></script>
+	<script src="js/catalog.min.js?_v=20231129012215"></script>
+	<script src="js/product.min.js?_v=20231129012215"></script>
+	<script src="js/checkout.min.js?_v=20231129012215"></script>
+	<script src="js/text.min.js?_v=20231129012215"></script>
 	<!--<script>-->
 
 	<!--    window.addEventListener('DOMContentLoaded', () => {-->

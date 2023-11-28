@@ -1,0 +1,130 @@
+.collection {
+
+  &-item {
+    display: block;
+    padding: .32rem .32rem .37rem;
+    border: gem(1) solid var(--black);
+
+    .image {
+      height: 4.06rem;
+      margin-bottom: .12rem;
+      @media all and (max-width: 992px) {
+        height: 3.51rem;
+      }
+      @media all and (max-width: 576px) {
+        margin-bottom: .08rem;
+        height: 3.1rem !important;
+      }
+
+      img {
+        transition: all .3s linear;
+      }
+
+
+    }
+
+    .title {
+      display: grid;
+      align-items: center;
+      grid-template-columns: 1fr .64rem;
+      column-gap: .16rem;
+      @media all and (max-width: 576px) {
+        grid-template-columns: 1fr .48rem;
+      }
+
+      button {
+        width: .64rem;
+        height: .64rem;
+        border-radius: 50%;
+        border: gem(1) solid var(--black);
+        transition: all .3s linear;
+        @media all and (max-width: 576px) {
+          width: .48rem;
+          height: .48rem;
+        }
+      }
+    }
+
+    h3 {
+      text-transform: uppercase;
+    }
+
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
+
+      .title {
+        button {
+          background-color: var(--accent);
+          border-color: var(--main);
+          color: var(--white);
+
+        }
+      }
+    }
+  }
+
+  .row {
+    .col-lg-4 {
+      margin-bottom: .49rem;
+      @media all and (max-width: 576px) {
+        margin-bottom: .4rem;
+      }
+
+      &:nth-child(2), &:nth-child(6) {
+
+        .collection-item {
+          //padding: 0;
+          max-width: 3.18rem;
+          margin: 0 auto;
+          border: none;
+
+          .image {
+            height: 3.51rem;
+          }
+        }
+      }
+    }
+  }
+
+  &__menu {
+    ul > li {
+      text-transform: uppercase;
+      padding-bottom: .04rem;
+      position: relative;
+      cursor: pointer;
+
+      &::before {
+        width: 0;
+        height: gem(1);
+        bottom: 0;
+        left: 0;
+        content: '';
+        position: absolute;
+        background-color: var(--black);
+        transition: width .3s linear;
+      }
+
+      &:hover {
+        &::before {
+          width: calc(100% + .2rem);
+        }
+      }
+
+      span {
+        margin-left: .16rem;
+      }
+
+      &.active {
+        pointer-events: none;
+        color: var(--accent);
+
+        &::before {
+          width: calc(100% + .2rem);
+          background-color: var(--accent);
+        }
+      }
+    }
+  }
+}

@@ -9,7 +9,7 @@
     border: .01rem solid var(--black);
     background-color: transparent;
     transition: all .3s linear;
-
+flex-shrink: 0;
     span {
       opacity: 0;
       transition: opacity .3s linear;
@@ -28,6 +28,38 @@
 
       span {
         opacity: 1;
+      }
+    }
+  }
+
+  &.round {
+    .box {
+      width: .24rem;
+      height: .24rem;
+      border-radius: 50%;
+      span{
+        position: absolute;
+        width: .144rem;
+        height: .144rem;
+        border-radius: 50%;
+        background-color: var(--accent);
+      }
+      &:hover{
+        span{
+            background-color: var(--accent-light);
+        }
+      }
+    }
+
+    .title {
+      margin: 0 .08rem;
+    }
+
+    &.active {
+      .box {
+        border-color: var(--black);
+        background-color: transparent;
+
       }
     }
   }

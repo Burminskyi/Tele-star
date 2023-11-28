@@ -6,11 +6,15 @@
   }
 
   &__list {
+    position: relative;
     max-height: gem(200);
     overflow-y: scroll;
     @media (max-width: 576px) {
       max-height: gem(150);
     }
+
+
+
   }
 
   &__content {

@@ -1,0 +1,134 @@
+.cart-page {
+  padding-bottom: 1rem !important;
+
+  &__header {
+    margin: .42rem 0 .45rem;
+    padding-bottom: .095rem;
+    border-bottom: gem(1) solid var(--black);
+    @media all and (max-width: 576px) {
+      margin: .26rem 0 .32rem;
+    }
+
+    .quantity {
+      margin-left: .24rem;
+    }
+  }
+
+  &__items {
+
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: 1.73rem repeat(2, 1fr) 1.05rem 1.2rem  .24rem;
+    column-gap: .64rem;
+    align-items: center;
+    @media all and (max-width: 992px) {
+      grid-template-areas: "img info delete"
+    "img info delete"
+      "img info delete"
+      "img info delete"
+      "img info delete";
+      grid-template-columns: 1.73rem 1fr .24rem;
+      padding-bottom: .08rem;
+      gap: .07rem .16rem;
+      &:first-child {
+        display: none;
+      }
+      .image {
+        grid-area: img;
+        align-self: flex-start;
+      }
+      .delete {
+        grid-area: delete;
+        grid-row: 1/2;
+      }
+      .image {
+        + div {
+          grid-area: info;
+          grid-row: 1/2;
+
+          + div {
+            grid-area: info;
+            grid-row: 2/3;
+          }
+        }
+      }
+      .counter, .h5 {
+        grid-area: info;
+      }
+      .counter {
+        grid-row: 3/4;
+        width: max-content;
+      }
+      .h5 {
+        grid-row: 4/5;
+      }
+    }
+    @media all and (max-width: 576px) {
+      grid-template-columns: 1.03rem 1fr .24rem;
+      .image {
+        height: 1.03rem;
+      }
+      .counter {
+        height: .36rem;
+      }
+    }
+
+    .size {
+      margin: 0;
+    }
+  }
+
+  &__footer {
+    margin-top: .3rem;
+    padding-left: .8rem;
+
+    .h5 {
+      font-family: CeraPro, sans-serif, system-ui;
+    }
+
+    .btn__outline {
+      margin-right: .2rem;
+      width: 2.37rem;
+      white-space: nowrap;
+    }
+
+    @media all and (max-width: 992px) {
+      padding-left: 0;
+    }
+    @media all and (max-width: 576px) {
+      .btn {
+        width: 100%;
+
+        &__outline {
+          margin-right: 0;
+          margin-bottom: .12rem;
+        }
+      }
+
+    }
+  }
+
+  &-empty {
+    padding: 1rem 0 0;
+
+
+    &__header {
+      width: 2.78rem;
+      height: 2.78rem;
+      border-radius: 50%;
+      background-color: var(--accent-light);
+      margin: 0 auto .32rem;
+      @media all and (max-width: 576px) {
+        margin-bottom: .56rem;
+      }
+    }
+
+    .btn {
+      @media all and (max-width: 576px) {
+        width: 100%;
+      }
+    }
+  }
+}

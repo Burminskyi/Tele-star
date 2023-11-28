@@ -5,6 +5,7 @@ import accordion from "../modules/accordion.js";
 import {body} from "../core/elementsNodeList.js";
 import initCheckBox from "../modules/checkbox.js";
 import initRange from "../modules/rangeInput.js";
+import PerfectScrollbar from "perfect-scrollbar";
 
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -15,6 +16,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
         //Init modules start
         dropdown();
+
         initRange();
         accordion('.filter-accordion', '.filter-accordion__header', '.filter-accordion__content')
         initCheckBox();
@@ -36,7 +38,7 @@ window.addEventListener("DOMContentLoaded", () => {
                 filterBtn.dataset.position = '0';
                 setTimeout(() => {
                     filter.classList.remove("active");
-                    body.classList.remove('open-filter')
+                    body.classList.remove('overlay')
                 }, 100)
 
 
@@ -44,7 +46,7 @@ window.addEventListener("DOMContentLoaded", () => {
                 filterBtn.dataset.position = scrollPosition;
                 disableScrollAndSwipes(scrollPosition);
                 filter.classList.add("active");
-                body.classList.add('open-filter')
+                body.classList.add('overlay')
             }
         }
     } catch (e) {

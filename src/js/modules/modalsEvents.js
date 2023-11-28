@@ -6,23 +6,11 @@ import {copyText} from "./helpers.js";
 
 
 export default function modalsEvents(target) {
-    if (target.dataset.target == 'donate') {
+    if (target.dataset.target === 'size') {
+        modal.classList.add('modal-size');
+        modalBody.firstElementChild.innerHTML = renderSizeModal();
+    }
 
-        modalBody.firstElementChild.classList.add('donate-modal');
-        modalBody.firstElementChild.innerHTML = renderDonateModal(target);
-        getElements('[data-copy] button').forEach((item) => {
-            item.addEventListener('click', () => {
-                copyText(item.previousElementSibling)
-            })
-        });
-    }
-    if (target.dataset.target == 'consultation') {
-        modalBody.firstElementChild.innerHTML = renderConsultationModal(target);
-        new Form('.form-modal').init();
-    }
-    if (target.dataset.form) {
-        modalBody.firstElementChild.innerHTML = renderFormAnswer(target)
-    }
 }
 
 function renderDonateModal(target) {
@@ -64,6 +52,20 @@ function renderDonateModal(target) {
     </div>`
 }
 
+function renderSizeModal() {
+
+
+    return `<h2 class="text-uppercase mb_32-22">Розмірна сітка</h2>
+                <div class="image mb_32-22">
+                </div>
+                <div class="f-size_m f-weight_500 mb_24-16">
+                    Якщо у вас не вийшло підібрати розмір, наші менеджери допоможуть вам!
+                </div>
+                <a href="#" class="btn btn__outline">
+                    Написати
+                </a>`
+}
+
 
 function renderFormAnswer(target) {
     modal.classList.add('modal__form-answer');
@@ -89,42 +91,4 @@ function renderFormAnswer(target) {
 }
 
 
-function renderConsultationModal(target) {
-    return `<div class="row">
-                    <div class="col-lg-8 pos-r mb_32-16">
-                        <h3 class="mb_24 f-family_unbonded">
-                         ${target.dataset.consultation}
-                        </h3>
-                        <div class="f-size_lg">Запишіться на консультацію і наш менеджер зв’яжеться з вами найближчим
-                            часом
-                        </div>
-                          <div class="tooth-bg pos-a">
-                            <svg class="icon">
-                                <use xlink:href="#tooth-bg"></use>
-                            </svg>
-                        </div>
-                    </div>
-                    
-                    <div class="col-12">
-                        <form class="form form-modal form-consultation" data-form="${target.dataset.consultation}">
-                            <div class="form__item ">
-                                <label for="modal-name" class="f-size_sm mb_5">Ім’я</label>
-                                <input type="text" id="modal-name" name="name" class="form__input f-weight_500">
-                                <div class="form__message">
-                                </div>
-                            </div>
-                            <div class="form__item ">
-                                <label for="modal-phone" class="f-size_sm mb_5">Номер телефону</label>
-                                <input type="text" id="modal-phone" name="phone" class="form__input f-weight_500">
-                                <div class="form__message">
-                                </div>
-                            </div>
-                           
-                            <div class="form__btn">
-                                <button class="btn btn_fill" type="submit">Записатися</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>`
-}
 

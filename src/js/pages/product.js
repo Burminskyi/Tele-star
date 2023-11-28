@@ -5,10 +5,13 @@ import {disableScrollAndSwipes, enableScrollAndSwipes, getElement, getElements} 
 import {removeActive} from "../core/classesEvents.js";
 import {EffectFade, Navigation} from "swiper/modules";
 import Swiper from "swiper";
+import modalsEvents from "../modules/modalsEvents.js";
+import Modal from "../modules/modal.js";
 
 
 window.addEventListener("DOMContentLoaded", () => {
     try {
+        if (!getElement('.product-page')) return
         const galleryParent = getElement('.product__gallery');
         const gallery = new Swiper('[data-swiper="gallery"]', {
             modules: [EffectFade],
@@ -16,6 +19,7 @@ window.addEventListener("DOMContentLoaded", () => {
             loop: true,
             effect: 'fade',
             spaceBetween: 0,
+            allowTouchMove: false,
         });
         const galleryNavSlider = getElements('.gallery__nav .image', galleryParent);
         galleryNavSlider.forEach(item => {
@@ -68,6 +72,13 @@ window.addEventListener("DOMContentLoaded", () => {
                 getElement('.swiper-navigation').classList.add('hide')
             }
         }
+
+        getElements('[data-target]').forEach(btn => {
+            btn.addEventListener('click', () => {
+                modalsEvents(btn);
+                new Modal(".modal").openModal();
+            })
+        })
 
 
     } catch (e) {

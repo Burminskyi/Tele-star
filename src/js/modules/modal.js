@@ -12,7 +12,7 @@ class Modal {
     openModal() {
         this.modal.classList.add("show");
         this.modal.classList.remove("hide");
-        document.body.classList.add("active");
+        document.body.classList.add("overlay");
         this.attachModalEvents(this.modal);
     }
     attachModalEvents() {
@@ -43,8 +43,8 @@ class Modal {
             this.modal.classList = "modal";
             this.modal.classList.add("hide");
             this.modal.classList.remove("show");
-            getElement('.modal__content', this.modal).classList = 'modal__content w-100';
-            document.body.classList.remove("active");
+            // getElement('.modal__content', this.modal).classList = 'modal__content w-100';
+            document.body.classList.remove("overlay");
         }, 0);
 
         this.detachModalEvents(this.modal);

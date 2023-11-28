@@ -1,5 +1,9 @@
 .f {
-
+&-family{
+  &_main{
+    font-family: CeraPro, sans-serif, system-ui;
+  }
+}
   &-weight {
 
     &_400 {
@@ -32,10 +36,10 @@
     }
 
 
-    &_l-m {
-      font-size: var(--txt-l);
+    &_18-16 {
+      font-size: .18rem;
       @media (max-width: 576px) {
-        font-size: var(--txt-m);
+        font-size: .16rem;
       }
     }
     &_l-s {
