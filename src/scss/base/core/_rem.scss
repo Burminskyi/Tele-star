@@ -42,7 +42,7 @@
 //TODO change breackpoint before realize
 // @include remBase(1280, 0);
 
-@include remBase(1440, 0);
+@include remBase(1920, 0);
 
 // Usually, base breakpoint is for desktop, so other (smaller) bps are specified via 'max-width' media query
 
@@ -50,13 +50,13 @@
 // @include remBreakpoint(768, 0); // tablet
 // @include remBreakpoint(480, 0); // mobile
 
-@media all and (max-width: 992px) {
-  @include remBase(768, 0);
-}
+// @media all and (max-width: 992px) {
+//   @include remBase(768, 0);
+// }
 
 @media all and (max-width: 576px) {
-  @include remBase(375, 0);
+  @include remBase(360, 0);
 }
 
-@include remBreakpoint(1900, 0, 'min-width'); // hd
- @include remBreakpoint(2560, 1200, 'min-width'); // 4k displays
+@include remBreakpoint(1920, 0, 'min-width'); // hd
+@include remBreakpoint(2560, 1920, 'min-width'); // 4k displays

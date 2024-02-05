@@ -1,0 +1,172 @@
+.payment-section {
+  position: relative;
+  color: var(--white);
+  background: var(--black);
+  padding-top: gem(40);
+  padding-bottom: gem(120);
+  &__info {
+    font-size: gem(24);
+    margin: auto;
+    text-align: center;
+    margin-bottom: gem(40);
+    span {
+      color: var(--accent);
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: gem(23);
+    margin-bottom: gem(40);
+  }
+  &__list-item {
+    text-align: center;
+    width: 100%;
+    padding: gem(13) gem(20);
+    height: gem(130);
+    border-radius: 10px;
+    background: linear-gradient(89deg, #419fd9 4.7%, #78cbff 89.82%);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    color: var(--black);
+    font-size: gem(20);
+    font-weight: 700;
+    span {
+      display: block;
+      font-weight: 500;
+      &.first {
+        margin-bottom: gem(6);
+      }
+      &.second {
+        margin-bottom: gem(14);
+      }
+      &.other {
+        margin-bottom: gem(20);
+      }
+    }
+  }
+  .earn-tg {
+    text-align: center;
+    font-family: NAMU;
+    font-size: gem(20);
+    margin-bottom: gem(57);
+    span {
+      font-family: Inter;
+      font-weight: 800;
+    }
+  }
+  .payment-help {
+    text-align: center;
+    margin-bottom: gem(20);
+    font-weight: 400;
+  }
+  &__bg {
+    position: absolute;
+    background-image: url("@img/payment-section-bg.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    &.first {
+      width: gem(111);
+      height: gem(85);
+      top: gem(50);
+      left: 0;
+    }
+    &.second {
+      transform: rotate(180deg);
+      width: gem(133.2);
+      height: gem(102);
+      top: gem(210);
+      right: 0;
+    }
+    &.third {
+      transform: rotate(146deg);
+      width: gem(60.5);
+      height: gem(46.2);
+      top: gem(820);
+      right: gem(155);
+    }
+    &.fourth {
+      transform: rotate(-30.651deg);
+      width: gem(45);
+      height: gem(33);
+      bottom: gem(500);
+      left: gem(20);
+    }
+    &.fifth {
+      z-index: 2;
+      width: gem(111);
+      height: gem(85);
+      bottom: gem(350);
+      right: gem(10);
+      transform: rotate(-30deg);
+    }
+    &.sixth {
+      width: gem(155.4);
+      height: gem(119);
+      bottom: gem(25);
+      right: gem(80);
+      transform: rotate(15deg);
+    }
+    &.seventh {
+      width: gem(200);
+      height: gem(153);
+      top: gem(480);
+      left: gem(-50);
+      transform: rotate(15deg);
+    }
+  }
+}
+
+@media screen and (min-width: 577px) {
+  .payment-section {
+    padding-top: gem(145);
+    padding-bottom: gem(65);
+    &__info {
+      display: none;
+    }
+    &__list {
+      margin: auto;
+      width: gem(812);
+      flex-direction: row;
+      flex-wrap: wrap;
+      column-gap: gem(40);
+      row-gap: gem(27);
+      margin-bottom: gem(52);
+    }
+    &__list-item {
+      padding-top: gem(20);
+      width: gem(386);
+      height: gem(260);
+      font-size: gem(36);
+      font-weight: 500;
+      line-height: 91.667%;
+      span {
+        font-size: gem(24);
+        &.first {
+          margin-bottom: gem(30);
+        }
+        &.second {
+          margin-bottom: gem(30);
+        }
+        &.other {
+          margin-bottom: gem(40);
+          &.full {
+            margin-bottom: gem(65);
+          }
+        }
+      }
+    }
+    .earn-tg {
+      margin: auto;
+      width: gem(936);
+      font-size: gem(48);
+      margin-bottom: gem(70);
+    }
+    .payment-help{
+      margin: auto;
+      font-size: gem(24);
+      width: gem(587);
+
+      margin-bottom: gem(28);
+    }
+  }
+}

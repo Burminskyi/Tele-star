@@ -1,0 +1,227 @@
+.book-section {
+  position: relative;
+  padding-top: gem(30);
+  padding-bottom: gem(30);
+  color: var(--black);
+  &__info {
+    text-align: center;
+    margin-bottom: gem(32);
+    span {
+      font-family: Inter;
+      color: var(--accent);
+    }
+  }
+  &__tariff {
+    width: gem(320);
+    padding: gem(10) gem(7);
+    border-radius: gem(20);
+    &.white {
+      box-shadow: -1px -1px 4px 3px rgba(0, 0, 0, 0.25);
+      margin-bottom: gem(24);
+    }
+    &.accent {
+        background: var(--accent);
+        color: var(--white);
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        margin-bottom: gem(24);
+      }
+      &.black {
+        background: var(--black);
+        color: var(--white);
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+      }
+  }
+  &__tariff-list {
+    display: flex;
+    flex-direction: column;
+    gap: gem(20);
+    font-size: gem(15);
+    margin-bottom: gem(34);
+    .crossed{
+      display: none;
+    }
+  }
+  .tariff-name {
+    text-align: center;
+    font-family: Inter;
+    font-size: gem(20);
+    font-weight: 700;
+    margin-bottom: gem(18);
+    &.accent {
+      color: var(--accent);
+    }
+  }
+  .seat-count {
+    text-align: center;
+    font-size: gem(20);
+    font-weight: 400;
+    margin-bottom: gem(22);
+  }
+  .old-price {
+    text-align: center;
+    font-size: gem(16);
+    text-decoration: line-through;
+    margin-bottom: gem(11);
+  }
+  .new-price {
+    text-align: center;
+    font-size: gem(24);
+    font-weight: 700;
+    margin-bottom: gem(22);
+  }
+  .pay-btn {
+    margin-bottom: gem(8);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--white);
+    color: var(--accent);
+    padding: gem(10);
+    width: 100%;
+    height: gem(54);
+    border-radius: 5px;
+    border: 2px solid var(--accent);
+    font-size: gem(20);
+    svg {
+      width: gem(45);
+      height: gem(45);
+      stroke: var(--accent);
+    }
+  }
+  .book-btn {
+    margin-bottom: gem(8);
+    display: flex;
+    background: var(--accent);
+    color: var(--white);
+    justify-content: space-between;
+    align-items: center;
+    padding: gem(10);
+    width: 100%;
+    height: gem(54);
+    border-radius: 5px;
+    border: 2px solid var(--white);
+    font-size: gem(20);
+    svg {
+      width: gem(45);
+      height: gem(45);
+      stroke: var(--white);
+    }
+  }
+  .connect-btn {
+    display: flex;
+    background: var(--black);
+    color: var(--white);
+    justify-content: space-between;
+    align-items: center;
+    padding: gem(10);
+    width: 100%;
+    height: gem(54);
+    border-radius: 5px;
+    border: 2px solid var(--white);
+    font-size: gem(16);
+    svg {
+      width: gem(45);
+      height: gem(45);
+      stroke: var(--white);
+    }
+  }
+  &__bg1 {
+    position: absolute;
+    width: gem(64);
+    height: gem(63);
+    top: gem(80);
+    left: 0;
+    background-image: url("@img/book-section-bg.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  &__bg2 {
+    position: absolute;
+    width: gem(88);
+    height: gem(79);
+    top: gem(990);
+    right: 0;
+    background-image: url("@img/book-section-bg2.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  &__bg3 {
+    position: absolute;
+    width: gem(111);
+    height: gem(71);
+    bottom: gem(230);
+    left: 0;
+    background-image: url("@img/book-section-bg3.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+}
+
+
+@media screen and (min-width: 577px) {
+  .book-section {
+    padding-top: gem(60);
+    padding-bottom: gem(30);
+    &__info{
+      margin-bottom: gem(62);
+      text-align: start;
+      font-size: gem(70);
+    }
+    &__wrap{
+      display: flex;
+      gap: gem(20);
+    }
+    &__tariff{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: gem(573);
+      height: gem(1254);
+      padding: gem(36) gem(42);
+      &.accent{
+        margin: 0;
+      }
+      &.white{
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        margin: 0;
+      }
+    }
+    &__tariff-list{
+      font-size: gem(20);
+      gap: gem(30);
+      .crossed{
+        display: block;
+        color: #8B8B8B;
+        text-decoration: line-through;
+        &.accent{
+          color: rgba(255, 255, 255, 0.40);
+        }
+      }
+
+    }
+    .tariff-name{
+      font-size: gem(32);
+      margin-bottom: gem(36);
+    }
+    .pay-btn , .book-btn, .connect-btn{
+      height: gem(69);
+      font-size: gem(29);
+    }
+    .old-price {
+      font-size: gem(24);
+      margin-bottom: gem(8);
+    }
+    .new-price {
+      font-size: gem(36);
+      margin-bottom: gem(16);
+    }
+    .seat-count {
+      font-size: gem(24);
+      margin-bottom: gem(22);
+    }
+    .price-wrap{
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+}

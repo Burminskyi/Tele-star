@@ -10,6 +10,11 @@
   border: 0;
   box-sizing: border-box;
 }
+span, button{
+  color: inherit;
+}
+
+
 
 *:before,
 *:after {
@@ -36,14 +41,19 @@ html {
 }
 
 body {
-  font-family: $fontFamily, system-ui;
+  font-family: 'Helvetica Neue', 'Roboto', 'Verdana', 'Tahoma', sans-serif;
+}
+
+
+body {
+  font-family: "Inter", "NAMU", sans-serif;
   margin: 0;
   font-size: var(--body-size);
   line-height: normal;
   font-weight: $fontWeight;
   position: relative;
   color: $fontColor;
-  background-color: var(--soft-white);
+  background-color: var(--white);
   min-height: 100vh;
   height: 100vh; /* Use vh as a fallback for browsers that do not support Custom Properties */
   height: calc(var(--vh, 1vh) * 100);
@@ -183,13 +193,11 @@ footer {
 
 svg {
   transition: all 0.35s linear;
-
-
 }
 
 .image {
   position: relative;
-  transition: all .35s linear;
+  //transition: all .35s linear;
 
   img {
     position: absolute;
@@ -241,6 +249,5 @@ a {
   opacity: 0.4;
   pointer-events: none;
 }
-
 
 

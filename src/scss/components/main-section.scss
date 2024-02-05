@@ -1,0 +1,222 @@
+.main-section {
+  position: relative;
+  background-color: var(--accent);
+  padding-bottom: gem(30);
+  padding-top: gem(30);
+  height: gem(572);
+  &::after {
+    position: absolute;
+    content: "";
+    top: gem(165);
+    left: gem(26);
+    width: gem(299.2);
+    height: gem(418);
+    background-image: url("@img/main-section-bg-mob.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  &::before {
+    position: absolute;
+    content: "";
+    width: gem(120);
+    height: gem(208);
+    top: gem(160);
+    right: 0;
+    background-image: url("@img/header-plane-3.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  &__wrap {
+    height: gem(512);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__wrap-top {
+    margin-bottom: gem(20);
+  }
+  &__wrap-bottom {
+    position: relative;
+    z-index: 1;
+    padding-top: gem(32);
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 90%;
+      background: linear-gradient(
+        to top,
+        #419fd9 0%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      backdrop-filter: blur(1px);
+      z-index: -1;
+    }
+  }
+  &__time-wrap {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: gem(20);
+    p {
+      width: gem(112);
+      text-align: center;
+      font-family: NAMU;
+      font-size: gem(14);
+      font-style: normal;
+      font-weight: 800;
+    }
+  }
+  &__info {
+    line-height: 110%;
+    text-align: center;
+    font-family: NAMU;
+    font-size: gem(20);
+    span {
+      line-height: 110%;
+      font-family: Inter;
+      font-size: gem(36);
+      display: block;
+    }
+  }
+  &__btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--accent);
+    font-family: NAMU;
+    font-size: gem(24);
+    width: 100%;
+    height: gem(49);
+    border-radius: 5px;
+    background: var(--white);
+  }
+  .how-to {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    font-size: gem(14);
+    font-style: italic;
+    font-weight: 700;
+  }
+  .bottom-text {
+    text-align: end;
+    font-size: gem(21);
+    font-style: italic;
+    font-weight: 800;
+    margin-bottom: gem(10);
+    &::before {
+      position: absolute;
+      content: "";
+      width: gem(24);
+      height: gem(24);
+      left: 0;
+      background-image: url("@img/telegram.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    &__desc {
+      display: none;
+    }
+  }
+  .insta-link {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 577px) {
+  .main-section {
+    height: gem(982);
+    padding-top: gem(90);
+    padding-bottom: gem(90);
+    &::after {
+      left: gem(800);
+      top: gem(170);
+      width: gem(773);
+      height: gem(810);
+    }
+    &__wrap-top {
+      width: gem(776);
+      display: flex;
+      flex-direction: column-reverse;
+      margin-bottom: gem(120);
+    }
+    &__info {
+      font-size: gem(70);
+      margin-bottom: gem(50);
+      span {
+        font-size: gem(128);
+        margin-bottom: gem(30);
+      }
+    }
+    &__time-wrap {
+      margin: 0;
+      p {
+        width: auto;
+        font-family: NAMU;
+        font-size: gem(24);
+      }
+    }
+    .how-to {
+      text-align: start;
+      font-size: gem(32);
+      margin-bottom: gem(120);
+    }
+    &__btn {
+      font-size: gem(40);
+      width: gem(425);
+      height: gem(81);
+      background: var(--white);
+    }
+    &__wrap-bottom {
+      padding: 0;
+      &::before {
+        content: none;
+      }
+    }
+    .bottom-text-wrap {
+      position: absolute;
+      right: 0;
+      top: gem(-710);
+    }
+    .bottom-text {
+      text-align: start;
+      font-size: gem(48);
+      margin-bottom: gem(10);
+      &::before {
+        width: gem(84);
+        height: gem(84);
+        left: gem(-105);
+        top: gem(-15);
+      }
+      &__desc {
+        text-align: end;
+        display: block;
+        font-size: gem(32);
+        font-style: italic;
+        font-weight: 400;
+      }
+    }
+    .insta-link {
+      position: absolute;
+      right: gem(80);
+      bottom: gem(90);
+      display: block;
+      font-size: gem(32);
+      font-weight: 600;
+      text-decoration-line: underline;
+      &::before {
+        position: absolute;
+        content: "";
+        width: gem(44);
+        height: gem(40);
+        left: gem(-50);
+        background-image: url("@img/instagram.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+}

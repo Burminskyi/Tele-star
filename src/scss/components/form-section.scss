@@ -1,0 +1,164 @@
+.form-section {
+  position: relative;
+  background: var(--accent);
+  padding-top: gem(74);
+  padding-bottom: gem(87);
+
+  &__bg1 {
+    position: absolute;
+    height: gem(55);
+    width: gem(87);
+    top: gem(10);
+    right: gem(132);
+    background-image: url("@img/form-section-bg.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  &__bg2 {
+    position: absolute;
+    height: gem(57);
+    width: gem(133);
+    bottom: gem(50);
+    right: gem(50);
+    background-image: url("@img/form-section-bg2.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  &__bg3 {
+    position: absolute;
+    width: gem(203);
+    height: gem(168);
+    top: gem(136);
+    right: 0;
+    background-image: url("@img/form-section-bg3.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  &__bg4 {
+    position: absolute;
+    width: gem(151);
+    height: gem(84);
+    bottom: gem(-10);
+    left: gem(-5);
+    background-image: url("@img/form-section-bg4.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+}
+
+.form-header {
+  font-size: gem(32);
+  margin-bottom: gem(12);
+  text-align: center;
+  font-weight: 800;
+  &__bottom {
+    font-size: gem(15);
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: gem(60);
+    &.bottom{
+      margin-bottom: gem(46);
+    }
+  }
+}
+
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  gap: gem(9);
+}
+
+.form-group {
+    position: relative;
+    z-index: 1;
+  input {
+    width: gem(320);
+    height: gem(54);
+    padding: gem(10) gem(20);
+    border-radius: 5px;
+    font-size: gem(20);
+    &::placeholder {
+      color: #8b8b8b;
+      font-weight: 400;
+    }
+  }
+}
+
+.form-btn {
+  display: flex;
+  width: gem(320);
+  height: gem(54);
+  padding: gem(10);
+  margin-top: gem(30);
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: #7dcdff;
+  font-size: gem(20);
+  font-weight: 600;
+  &.bottom{
+    margin-top: gem(18);
+  }
+}
+
+
+@media screen and (min-width: 577px) {
+  .form-section {
+    padding-top: gem(80);
+    padding-bottom: gem(110);
+    .form-header{
+      margin-bottom: gem(34);
+      font-size: gem(60);
+      &__bottom{
+        font-size: gem(20);
+        margin-bottom: gem(34);
+      }
+    }
+    &__wrap{
+      margin: auto;
+      width: gem(574);
+    }
+    .feedback-form {
+      gap: gem(16);
+    }
+    .form-btn {
+      display: flex;
+      width: gem(574);
+      height: gem(71);
+      margin-top: gem(34);
+      font-size: gem(32);
+    }
+    .form-group {
+    input {
+      width: gem(574);
+      height: gem(71);
+      padding: gem(10) gem(25);
+      font-size: gem(32);
+    }
+  }
+  &__bg1 {
+    height: gem(105);
+    width: gem(166);
+    top: gem(560);
+    right: gem(553);
+  }
+  &__bg2 {
+    z-index: 3;
+    height: gem(97);
+    width: gem(226);
+    bottom: gem(190);
+    right: gem(1190);
+  }
+  &__bg3 {
+    z-index: 3;
+    width: gem(483);
+    height: gem(539);
+    top: gem(-50);
+    right: gem(390);
+    background-image: url("@img/form-section-bg3-desk.png");
+  }
+  &__bg4 {
+    display: none;
+  }
+  }
+}

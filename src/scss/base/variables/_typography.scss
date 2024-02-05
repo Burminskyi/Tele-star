@@ -1,44 +1,20 @@
 
 :root {
-  // FONT-SIZE
-  --font-size-h1: #{gem(48)};
-  --font-size-h2: #{gem(40)};
-  --font-size-h3: #{gem(36)};
-  --font-size-h4: #{gem(20)};
-  --font-size-h5: #{gem(24)};
-  --body-size: #{gem(20)};
-  --txt-l: #{gem(20)};
-  --txt-m: #{gem(16)};
-  --txt-s: #{gem(14)};
-  --btn: #{gem(16)};
-  --btn-l: #{gem(18)};
+  --font-size-h1: #{gem(24)};
+  --font-size-h2: #{gem(20)};
+  --body-size: #{gem(14)};
 
-
-
-
-  @media all and (max-width: 992px) {
-    --font-size-h1: #{gem(36)};
-    --font-size-h2: #{gem(34)};
-    --font-size-h3: #{gem(30)};
-    --font-size-h4: #{gem(18)};
-    --font-size-h5: #{gem(22)};
-    --body-size: #{gem(18)};
-    --txt-l: #{gem(18)};
+  @media all and (min-width: 576px) {
+    --font-size-h1: #{gem(52)};
+    --font-size-h2: #{gem(40)};
+    --body-size: #{gem(16)};
   }
-  @media all and (max-width: 576px) {
-    --font-size-h1: #{gem(32)};
-    --font-size-h2: #{gem(28)};
-    --font-size-h3: #{gem(24)};
-    --font-size-h4: #{gem(16)};
-    --font-size-h5: #{gem(20)};
-
-
-
-
-
-
-
-
+  
+  @media all and (min-width: 992px) {
+    --body-size: #{gem(20)};
+    --font-size-h1: #{gem(72)};
+    --font-size-h2: #{gem(60)};
+    --font-size-h3: #{gem(32)};
   }
 
 
@@ -50,7 +26,7 @@
   //--line-height-h4: #{gem(34)};
   //--line-height-h5: #{gem(32)};
 
-  --body-line: 150%;
+  // --body-line: 150%;
   //--txt-line-lg: #{gem(24)};
   //--txt-line-m: #{gem(16)};
   //--txt-line-s: 120%;

@@ -83,6 +83,8 @@
 		"webpack-stream": "latest"
 	},
 	"dependencies": {
+		"aos": "^2.3.4",
+		"build": "^0.1.4",
 		"gsap": "^3.12.2",
 		"gulp-cheerio": "^1.0.0",
 		"imask": "^6.4.3",

@@ -1,127 +1,240 @@
 .header {
-  height: var(--header-height);
-  transition: all 0.35s linear;
-  color: var(--white);
-  position: fixed;
-  width: 100%;
-  z-index: 5;
-  border-bottom: gem(1) solid var(--white);
-  background: linear-gradient(180deg, rgba(52, 56, 53, 0.25) 0%, rgba(52, 56, 53, 0.00) 100%);
-
-  .logo {
-    margin-right: auto;
-  }
-
-  .icon-bag {
-    color: var(--white);
-  }
-
-
-  &-black {
-    color: var(--black);
-
-    svg {
-      fill: var(--black);
-    }
-
-    &::after {
-      background-color: transparent;
-    }
-
-    .logo-project {
-
-      fill: #111111;
-
-    }
-
-    .burger {
-      .line {
-        background-color: var(--black);
-
-        &::before, &::after {
-          background-color: var(--black);
-        }
-      }
-    }
-  }
-
-  &.fixed, &.active, &-black {
-    color: var(--black);
-
-    svg {
-      fill: var(--black);
-    }
-  }
-
-  &.fixed, &-black {
-    background: var(--white);
-    border-color: var(--black);
-
-
-    .icon-bag {
-      color: var(--black);
-    }
-
-    .menu {
-      a {
-        color: var(--black);
-
-        &::before {
-          background-color: var(--black);
-        }
-
-
-      }
-    }
-
-    .lang-switcher {
-      li:first-child {
-        &::before {
-          color: var(--black);
-        }
-      }
-    }
-
-    .burger {
-      .line {
-        background-color: var(--black);
-
-        &::before, &::after {
-          background-color: var(--black);
-        }
-      }
-    }
-  }
-
-  &-black {
-    background-color: transparent;
-  }
-
-  &.active {
-    background-color: transparent;
-
-    .logo {
-      pointer-events: none;
-    }
-
-    border-color: transparent;
-
-    .menu__header {
-      transform: translateX(0);
-    }
-
-    .burger {
-      .line {
-        background-color: transparent;
-      }
-    }
-  }
-
   &-hidden {
     transform: translateY(-100%);
   }
+  position: fixed;
+  font-family: NAMU-1990;
+  padding-top: gem(34);
+  padding-bottom: gem(34);
+  font-weight: 800;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  font-size: gem(16);
+  background-color: var(--accent);
 
+  &__container {
+    max-width: gem(1760);
+  }
+  &__logo {
+    font-family: Inter;
+    font-size: gem(16);
+    font-style: normal;
+    font-weight: 800;
+    z-index: 50;
+    position: relative;
+  }
 
+  &__wrap {
+    position: relative;
+    z-index: 1000;
+  }
+
+  &__menu {
+    background-color: var(--accent);
+    width: gem(360);
+    height: gem(640);
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: gem(56);
+    transform: translateX(100%);
+    transition:
+      transform 0.3s ease,
+      opacity 0.3s ease;
+    animation-duration: 0.3s;
+
+    &.initial-hide {
+      visibility: hidden;
+    }
+    &__bg1 {
+      position: absolute;
+      height: gem(77);
+      width: gem(64);
+      top: gem(46);
+      left: gem(121);
+      background-image: url("@img/header-tg.png");
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+    }
+    &__bg2 {
+      position: absolute;
+      height: gem(111);
+      width: gem(92.6);
+      top: gem(257);
+      right: gem(7);
+      background-image: url("@img/header-tg-2.png");
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+    }
+    &__bg3 {
+      position: absolute;
+      width: gem(180);
+      height: gem(252);
+      top: gem(306);
+      left: 0;
+      background-image: url("@img/header-tg-3.png");
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+    }
+    &__bg4 {
+      position: absolute;
+      width: gem(90);
+      height: gem(80);
+      top: gem(195);
+      left: 0;
+      background-image: url("@img/header-plane.png");
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+    }
+    &__bg5 {
+      position: absolute;
+      width: gem(130);
+      height: gem(100);
+      top: gem(446);
+      right: 0;
+      background-image: url("@img/header-plane-2.png");
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+    }
+    &__bg6 {
+      position: absolute;
+      width: gem(150);
+      height: gem(260);
+      top: 0;
+      right: 0;
+      background-image: url("@img/header-plane-3.png");
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+    }
+  }
 }
 
+.header__menu.active {
+  transform: translateX(0);
+  opacity: 1;
+}
 
+.menu {
+  &__body {
+    margin-top: gem(146);
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: gem(32);
+  }
+}
+
+.burger-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: gem(0);
+  right: gem(0);
+  z-index: 2;
+  width: gem(42.5);
+  height: gem(20);
+
+  @media screen and (min-width: 577px) {
+    display: none;
+  }
+}
+
+.burger-btn.active {
+  display: none;
+}
+
+.burger-close-btn {
+  display: none;
+  position: absolute;
+  top: gem(0);
+  right: gem(0);
+  z-index: 2;
+  width: gem(22.5);
+  height: gem(20);
+}
+
+.burger-close-btn.visible {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 577px) {
+  .header {
+    &__logo {
+      font-size: gem(20);
+    }
+    &__wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &__menu {
+
+      opacity: 1;
+      visibility: visible;
+      display: flex;
+      width: inherit;
+      height: inherit;
+      background-color: inherit;
+      position: static;
+      flex-direction: row;
+      transform: none;
+      
+      &.initial-hide {
+        visibility: visible;
+      }
+      &__bg1,
+      &__bg2,
+      &__bg3,
+      &__bg4,
+      &__bg5,
+      &__bg6 {
+        display: none;
+      }
+    }
+    .btn-wrap {
+      display: none;
+    }
+  }
+  .menu {
+    &__list {
+      display: flex;
+      gap: gem(90);
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      font-size: gem(20);
+    }
+    &__body {
+      margin: 0;
+    }
+    .burger-close-btn {
+      display: none;
+    }
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(34, 43, 56, 0.5);
+  z-index: 999;
+  display: none;
+}
+
+.overlay.active {
+  display: block;
+}

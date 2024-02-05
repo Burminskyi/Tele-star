@@ -1,16 +1,17 @@
-$maxWidth: 1440;
-$minWidth: 375;
+$maxWidth: 1920;
+$minWidth: 360;
 
 
-$mainFont: CeraPro;
-$mainWeight: 400;
+
+$mainFont: "Inter";
+$mainWeight: 500;
 
 
 
 
 
 $fontFamily: $mainFont, sans-serif;
-$fontColor: var(--black);
+$fontColor: var(--white);
 
 $fontWeight: $mainWeight;
 

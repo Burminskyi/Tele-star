@@ -1,0 +1,114 @@
+.author-section {
+  position: relative;
+  background: var(--black);
+  padding-top: gem(40);
+
+  &__info {
+    font-family: Inter;
+    margin: auto;
+    text-align: center;
+    margin-bottom: gem(20);
+    span {
+      display: block;
+      color: var(--accent);
+    }
+  }
+  .author-info-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: gem(30);
+    gap: gem(20);
+    font-family: NAMU;
+    font-size: gem(16);
+    line-height: 120%;
+  }
+
+  .author-info-icon {
+    width: gem(32);
+    height: gem(32);
+    svg {
+      width: gem(32);
+      height: gem(32);
+    }
+  }
+  .image-wrap {
+    width: gem(360);
+    height: gem(483);
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .tg-btn{
+    display: none;
+  }
+}
+
+@media screen and (min-width: 577px) {
+  .author-section {
+    padding-top: gem(55);
+    padding-bottom: gem(140);
+    &__info {
+      text-align: start;
+      margin-bottom: gem(70);
+    }
+    .author-info-container {
+      width: gem(782);
+      flex-wrap: wrap;
+      height: gem(648);
+    }
+    .author-info-wrap {
+      font-size: gem(24);
+      width: gem(420);
+      line-height: 120%;
+      display: flex;
+      flex-direction: column;
+      gap: gem(17);
+    }
+    .author-info-icon {
+      width: gem(30);
+      height: gem(30);
+      svg {
+        width: fit-content;
+        height: fit-content;
+      }
+    }
+    .image-wrap {
+      position: absolute;
+      content: url("@img/author-section.png");
+      width: gem(1200);
+      height: auto;
+      bottom: gem(-210);
+      right: gem(-140);
+    }
+    .tg-btn {
+      position: absolute;
+      bottom: gem(215);
+      right: gem(615);
+      display: flex;
+      align-items: center;
+      width: gem(600);
+      height: gem(85);
+      border-radius: 100px;
+      background: #fff;
+      backdrop-filter: blur(13px);
+      padding-top: gem(25);
+      padding-bottom: gem(25);
+      padding-left: gem(104);
+      color: var(--accent);
+      font-size: gem(48);
+      font-style: italic;
+      &::before {
+        position: absolute;
+        content: "";
+        width: gem(71);
+        height: gem(71);
+        left: gem(8);
+        background-image: url("@img/telegram.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+}

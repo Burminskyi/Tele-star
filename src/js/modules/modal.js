@@ -1,7 +1,3 @@
-// import { modal } from "./elements";
-// const modalForm = document.querySelector(".modal-form");
-import {getElement} from "../core/index.js";
-
 class Modal {
     constructor(selector) {
         this.modal = document.querySelector(selector);

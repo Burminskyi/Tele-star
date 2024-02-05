@@ -1,0 +1,170 @@
+.structure-section {
+    position: relative;
+  background: var(--black);
+  color: var(--white);
+  padding-top: gem(36);
+  padding-bottom: gem(54);
+  &__info {
+    font-size: gem(24);
+    margin: auto;
+    width: gem(182);
+    text-align: center;
+    margin-bottom: gem(41);
+    span {
+      color: var(--accent);
+    }
+  }
+  &__list {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: gem(28);
+  }
+  &__list-item {
+    display: flex;
+    flex-direction: column;
+    gap: gem(9);
+  }
+  &__list-step-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: gem(16);
+    padding-right: gem(2);
+    border-radius: 100px;
+    box-shadow: -4px 4px 3px 0px rgba(0, 0, 0, 0.25);
+    width: gem(150);
+    height: gem(36);
+    background: var(--accent);
+    font-size: gem(20);
+    .number {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: var(--accent);
+      width: gem(32);
+      height: gem(32);
+      background-color: var(--white);
+      border-radius: 50%;
+    }
+  }
+  &__list-info {
+    width: 100%;
+    border-radius: 100px;
+    background: var(--white);
+    padding: gem(16);
+    box-shadow: -4px 4px 3px 0px rgba(0, 0, 0, 0.25);
+    color: var(--black);
+    font-size: gem(16);
+  }
+  &__list-description {
+    width: 100%;
+    border-radius: 10px;
+    background: linear-gradient(
+      145deg,
+      #419fd9 15.4%,
+      #b6e3ff 73.14%,
+      #78cbff 127.74%
+    );
+    padding: gem(16);
+    box-shadow: -4px 4px 3px 0px rgba(0, 0, 0, 0.25);
+    color: var(--black);
+    font-weight: 400;
+    &.bold{
+        font-size: gem(16);
+        font-weight: 700;
+        span{
+            display: block;
+            color: var(--white);
+        }
+    }
+  }
+  &__bg1 {
+    position: absolute;
+    height: gem(314);
+    width: gem(196);
+    top: gem(260);
+    right: 0;
+    background-image: url("@img/structure-section-bg-mob.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  &__bg2 {
+    position: absolute;
+    height: gem(435);
+    width: gem(363);
+    top: gem(550);
+    left: 0;
+    background-image: url("@img/structure-section-bg2-mob.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  &__bg3 {
+    position: absolute;
+    width: gem(320);
+    height: gem(250);
+    top: gem(1200);
+    left: gem(30);
+    background-image: url("@img/structure-section-bg3-mob.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+}
+
+@media screen and (min-width: 577px) {
+  .structure-section {
+    padding-top: gem(105);
+    padding-bottom: gem(95);
+    &__info{
+      font-size: gem(60);
+      text-align: start;
+      margin-left: 0;
+      width: gem(445);
+      margin-bottom: gem(64);
+    }
+    &__list{
+      flex-direction: row;
+      flex-wrap: wrap;
+      column-gap: gem(20);
+      row-gap: gem(30);
+      justify-content: center;
+    }
+    &__list-item {
+      width: gem(573);
+      gap: gem(15);
+    }
+    &__list-step-wrap{
+      width: gem(198);
+      height: gem(48);
+      font-size: gem(24);
+      padding-left: gem(22);
+      padding-right: gem(5);
+      .number{
+        width: gem(41);
+        height: gem(41);
+      }
+    }
+    &__list-info{
+      height: gem(112);
+      font-size: gem(24);
+      padding: gem(12) gem(26);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      line-height: 100%;
+    }
+    &__list-description{
+      height: gem(174);
+      padding-left: gem(24);
+      padding-right: gem(24);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: gem(18);
+      &.bold{
+        font-size: gem(22);
+      }
+    }
+  }
+}

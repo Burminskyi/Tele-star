@@ -1,0 +1,230 @@
+.program-section {
+  padding-top: gem(30);
+  color: var(--black);
+  &__info {
+    margin: auto;
+    text-align: center;
+    margin-bottom: gem(36);
+    span {
+      display: block;
+      color: var(--accent);
+      font-family: Inter;
+    }
+  }
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    gap: gem(7);
+    margin-bottom: gem(36);
+  }
+  &__lessons-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: gem(9);
+    margin-bottom: gem(30);
+  }
+  &__lessons {
+    border-radius: 5px;
+    background: var(
+      --blue,
+      linear-gradient(117deg, #419fd9 0%, #b6e3ff 49.78%, #78cbff 96.86%)
+    );
+  }
+  &__lessons-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: gem(320);
+    height: gem(67);
+    padding: gem(15) gem(8);
+    font-family: NAMU;
+    font-size: gem(16);
+    .open-btn {
+      width: gem(43);
+      height: gem(37);
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .lesson-block-number {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: gem(43);
+      height: gem(37);
+      background-color: var(--accent);
+      border-radius: 3px;
+      color: var(--white);
+    }
+  }
+  &__lesson-content {
+    position: relative;
+    padding: gem(15) gem(8);
+    display: flex;
+    flex-direction: column;
+    gap: gem(24);
+    font-family: NAMU;
+    h4,
+    span {
+      color: var(--white);
+      font-weight: 800;
+      font-family: Inter;
+    }
+    .mega-bonus {
+      color: var(--white);
+      font-weight: 800;
+      font-family: Inter;
+      text-decoration-line: underline;
+    }
+    &::before {
+      position: absolute;
+      top: 0;
+      content: "";
+      width: gem(305);
+      height: gem(2);
+      background: var(--black);
+    }
+  }
+  .program-info {
+    width: fit-content;
+    padding-bottom: gem(10);
+    padding-top: gem(6);
+    padding-left: gem(15);
+    padding-right: gem(15);
+    justify-content: center;
+    align-items: center;
+    font-family: NAMU;
+    font-size: gem(18);
+    box-shadow: -1px 2px 1px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 100px;
+
+    &.black {
+      background-color: var(--black);
+      color: var(--white);
+    }
+    &.accent {
+      background-color: var(--accent);
+      color: var(--white);
+    }
+    &.forteen {
+      font-size: gem(14);
+      padding-left: gem(10);
+      padding-right: gem(10);
+      padding-top: gem(8);
+      padding-bottom: gem(12);
+    }
+    &.seventeen {
+      font-size: gem(16);
+    }
+    &.bottom {
+      text-align: center;
+      font-size: gem(14);
+    }
+  }
+  .program-info-first-wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+  .program-info-second-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: gem(7);
+  }
+  .program-info-third-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: gem(7);
+  }
+  .bonuses {
+    padding: gem(25) gem(32);
+    width: gem(360);
+    height: gem(180);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("@img/bonuses-mob.png");
+  }
+}
+
+@media screen and (min-width: 577px) {
+  .program-section {
+    padding-top: gem(45);
+    padding-bottom: gem(32);
+    &__info {
+      margin-bottom: gem(32);
+      span {
+        font-size: gem(70);
+        font-weight: 800;
+      }
+    }
+    &__wrap {
+      gap: gem(16);
+    }
+    &__lessons-wrap {
+      margin: auto;
+      width: gem(888);
+      gap: gem(20);
+    }
+    &__lessons-header {
+      height: gem(135);
+      width: gem(888);
+      padding: gem(30) gem(50);
+      font-size: gem(32);
+      .lesson-block-number {
+        width: gem(75);
+        height: gem(75);
+      }
+      .open-btn {
+        width: gem(75);
+        height: gem(75);
+      }
+    }
+    &__lesson-content {
+      padding-top: gem(20);
+      padding-left: gem(50);
+      padding-right: gem(50);
+      padding-bottom: gem(50);
+      h4 {
+        font-size: gem(24);
+      }
+      &::before {
+        width: gem(786);
+      }
+    }
+    .program-info-first-wrap {
+      justify-content: center;
+      gap: gem(47);
+    }
+    .program-info {
+      height: gem(60);
+      font-size: gem(32);
+      padding: gem(10) gem(40);
+      &.bottom {
+        font-size: gem(32);
+        margin: auto;
+      }
+    }
+    .program-info-second-wrap,
+    .program-info-third-wrap {
+      flex-direction: row;
+      gap: gem(47);
+      .seventeen,
+      .forteen {
+        font-size: gem(32);
+        &.desc-white {
+          background: var(--white);
+          color: var(--black);
+          padding: gem(10) gem(40);
+        }
+        &.desc-accent {
+          background: var(--accent);
+          color: var(--white);
+        }
+      }
+    }
+  }
+}

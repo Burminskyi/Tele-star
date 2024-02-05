@@ -1,63 +1,70 @@
-.btn {
-  padding: 0 gem(40);
-  background-color: transparent;
-  line-height: normal;
-  text-align: center;
-  transition: all 0.45s ease-in-out;
+.btn-small {
   display: flex;
-  align-items: center;
+  width: gem(138);
+  height: gem(30);
+  padding: gem(10);
   justify-content: center;
-  text-transform: uppercase;
-  cursor: pointer;
-  width: max-content;
-  height: .52rem;
-  font-weight: 500;
-  font-size: var(--btn);
-  letter-spacing: gem(2.48);
-  flex-shrink: 0;
-  z-index: 1;
-  position: relative;
-
-  &_100 {
-    width: 100%;
-  }
-
-  //@media all and (max-width: 576px) {
-  //  width: 100%;
-  //}
-
-  &__fill {
-    background-color: var(--accent);
-    padding: 0 gem(32);
-    border: gem(2) solid var(--accent);
+  align-items: center;
+  font-size: gem(16);
+  border-radius: gem(100);
+  &.tg {
+    background: var(--black);
     color: var(--white);
-
-    &:hover {
-      background-color: transparent;
-      border-color: var(--black);
-      color: var(--black);
-    }
   }
-
-  &__outline {
+  &.inst {
+    background: var(--white);
     color: var(--black);
-    border: .02rem solid var(--black);
-    &:hover {
-      color: var(--white);
-      border-color: var(--black);
-      background-color: var(--black);
-    }
-    &_white{
-      border: .02rem solid var(--white);
-      color: var(--white);
-      &:hover {
-        color: var(--accent);
-        border-color: var(--white);
-        background-color: var(--white);
-      }
-    }
+  }
+  &.footer-btn {
+    font-size: gem(20);
+    width: gem(150);
+    height: gem(42);
+  }
+}
+.btn-wrap {
+  position: absolute;
+  bottom: gem(18);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: gem(44);
+  &.footer-btn {
+    position: static;
+    justify-content: space-between;
+    padding: 0;
+    gap: gem(20);
   }
 }
 
+// .btn:hover {
+//   background: radial-gradient(
+//     circle at center,
+//     rgba(60, 138, 255, 0.8) 0%,
+//     rgba(24, 72, 146, 0.8) 100%
+//   );
+//   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.25);
+// }
 
+// .load-more-btn {
+//   position: relative;
+//   z-index: 1;
+//   font-weight: 700;
+//   display: block;
+//   padding: gem(16) gem(8);
 
+//   margin: auto;
+//   color: var(--accent-light);
+//   border-bottom: 2px solid var(--accent-light);
+//   border-right: 2px solid transparent;
+//   border-left: 2px solid transparent;
+//   border-top: 2px solid transparent;
+//   transition: all 0.3s ease;
+//   &:hover,
+//   &:focus {
+//     padding: gem(16) gem(24);
+//     border-radius: 10px;
+//     border-right: 2px solid var(--accent-light);
+//     border-left: 2px solid var(--accent-light);
+//     border-top: 2px solid var(--accent-light);
+//   }
+// }
