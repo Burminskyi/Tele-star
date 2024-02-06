@@ -82,10 +82,18 @@
     border-radius: 5px;
     border: 2px solid var(--accent);
     font-size: gem(20);
-    svg {
-      width: gem(45);
-      height: gem(45);
+    .btn-image {
+      border-radius: 50%;
+      width: gem(44);
+      height: gem(44);
       stroke: var(--accent);
+    }
+    &:hover{
+      .btn-image {
+        scale: 1.2;
+        background: var(--accent);
+        stroke: var(--white);
+      }
     }
   }
   .book-btn {
@@ -101,10 +109,18 @@
     border-radius: 5px;
     border: 2px solid var(--white);
     font-size: gem(20);
-    svg {
-      width: gem(45);
-      height: gem(45);
+    .btn-image {
+      border-radius: 50%;
+      width: gem(44);
+      height: gem(44);
       stroke: var(--white);
+    }
+    &:hover{
+      .btn-image {
+        scale: 1.2;
+        background: var(--white);
+        stroke: var(--accent);
+      }
     }
   }
   .connect-btn {
@@ -119,10 +135,18 @@
     border-radius: 5px;
     border: 2px solid var(--white);
     font-size: gem(16);
-    svg {
-      width: gem(45);
-      height: gem(45);
+    .btn-image {
+      border-radius: 50%;
+      width: gem(44);
+      height: gem(44);
       stroke: var(--white);
+    }
+    &:hover{
+      .btn-image {
+        scale: 1.2;
+        background: var(--white);
+        stroke: var(--accent);
+      }
     }
   }
   &__bg1 {
@@ -187,8 +211,12 @@
       }
     }
     &__tariff-list{
+      margin: 0;
       font-size: gem(20);
       gap: gem(30);
+      &.first{
+        gap: gem(25);
+      }
       .crossed{
         display: block;
         color: #8B8B8B;

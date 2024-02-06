@@ -1,5 +1,5 @@
 .footer {
-    position: relative;
+  position: relative;
   color: var(--black);
   padding-top: gem(36);
   padding-bottom: gem(10);
@@ -85,5 +85,51 @@
     background-image: url("@img/book-section-bg3.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
+  }
+}
+
+@media screen and (min-width: 577px) {
+  .footer {
+    padding-bottom: gem(40);
+    padding-top: gem(75);
+    &__wrap {
+      gap: gem(90);
+      margin: 0;
+    }
+    &__map-wrap {
+      position: absolute;
+      left: gem(80);
+      top: gem(75);
+    }
+    &__info {
+      font-size: gem(40);
+      margin-bottom: gem(150);
+      &.map {
+        text-align: start;
+        margin-bottom: gem(66);
+      }
+      &.doc {
+        text-align: end;
+        margin-bottom: gem(66);
+      }
+    }
+    &__link-wrap {
+      font-size: gem(20);
+      gap: gem(25);
+      &.bottom {
+        align-items: start;
+      }
+      &.doc {
+        align-items: end;
+      }
+    }
+    &__doc-wrap {
+      position: absolute;
+      right: gem(80);
+      top: gem(75);
+    }
+    &__bottom-wrap{
+      font-size: gem(20);
+    }
   }
 }

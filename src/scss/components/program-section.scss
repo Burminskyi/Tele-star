@@ -140,20 +140,82 @@
     align-items: center;
     gap: gem(7);
   }
-  .bonuses {
-    padding: gem(25) gem(32);
-    width: gem(360);
-    height: gem(180);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url("@img/bonuses-mob.png");
+  
+}
+.bonuses {
+  position: relative;
+  width: 100%;
+  padding-top: gem(25);
+  padding-bottom: gem(25);
+  height: gem(180);
+  background: var(--accent);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("@img/bonuses-mob.png");
+  .container {
+    padding-left: gem(32);
+    padding-right: gem(32);
   }
+  &__wrap {
+    height: gem(130);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--white);
+    text-align: center;
+    font-size: gem(15);
+    font-weight: 800;
+  }
+  &__bg1 {
+    position: absolute;
+    height: gem(111);
+    width: gem(120);
+    top: gem(65);
+    left: gem(-40);
+    transform: rotate(-10deg);
+    background-image: url("@img/bonuses-tg.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  &__bg2 {
+    position: absolute;
+    height: gem(46);
+    width: gem(53);
+    top: gem(75);
+    right: gem(160);
+    background-image: url("@img/bonuses-tg.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  &__bg3 {
+    position: absolute;
+    width: gem(30);
+    height: gem(28);
+    transform: rotate(40deg);
+    top: gem(85);
+    right: gem(80);
+    background-image: url("@img/bonuses-tg.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  &__bg4 {
+    position: absolute;
+    width: gem(20);
+    height: gem(18);
+    transform: rotate(60deg);
+    top: gem(125);
+    right: gem(30);
+    background-image: url("@img/bonuses-tg.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+
 }
 
 @media screen and (min-width: 577px) {
   .program-section {
     padding-top: gem(45);
-    padding-bottom: gem(32);
+    padding-bottom: 0;
     &__info {
       margin-bottom: gem(32);
       span {
@@ -168,6 +230,7 @@
       margin: auto;
       width: gem(888);
       gap: gem(20);
+      margin-bottom: gem(66);
     }
     &__lessons-header {
       height: gem(135);
@@ -184,6 +247,7 @@
       }
     }
     &__lesson-content {
+      display: none;
       padding-top: gem(20);
       padding-left: gem(50);
       padding-right: gem(50);
@@ -193,6 +257,9 @@
       }
       &::before {
         width: gem(786);
+      }
+      &.active{
+        display: block;
       }
     }
     .program-info-first-wrap {
@@ -226,5 +293,48 @@
         }
       }
     }
+  }
+  .bonuses {
+    padding-top: gem(40);
+    height: gem(196);
+    background-image: url("@img/bonuses-bg.png");
+    .container {
+      padding-left: gem(160);
+      padding-right: gem(160);
+    }
+    &__wrap {
+      flex-direction: row-reverse;
+      font-size: gem(30);
+    }
+    &__large {
+      width: gem(651);
+    }
+    &__bg1 {
+      height: gem(220);
+      width: gem(245);
+      top: gem(-60);
+      left: gem(620);
+      transform: rotate(5deg);
+
+    }
+    &__bg2 {
+      height: gem(145);
+      width: gem(160);
+      top: gem(-30);
+      left: gem(840);
+      transform: rotate(20deg);
+    }
+    &__bg3 {
+      width: gem(80);
+      height: gem(90);
+      transform: rotate(45deg);
+      top: gem(45);
+      left: gem(990);
+
+    }
+    &__bg4 {
+      display: none;
+    }
+  
   }
 }

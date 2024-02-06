@@ -86,12 +86,16 @@
     justify-content: center;
     align-items: center;
     color: var(--accent);
-    font-family: NAMU;
     font-size: gem(24);
     width: 100%;
     height: gem(49);
     border-radius: 5px;
     background: var(--white);
+    transition: all 0.3s;
+    &:hover{
+      color: var(--white);
+      background: #0088CC;
+    }
   }
   .how-to {
     position: relative;
@@ -124,6 +128,17 @@
   .insta-link {
     display: none;
   }
+  .star-wrap {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    width: gem(23);
+    height: gem(22);
+    background-image: url("@img/star.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
 }
 
 @media screen and (min-width: 577px) {
@@ -132,10 +147,14 @@
     padding-top: gem(90);
     padding-bottom: gem(90);
     &::after {
-      left: gem(800);
-      top: gem(170);
-      width: gem(773);
-      height: gem(810);
+      left: gem(740);
+      top: gem(208);
+      width: gem(850.3);
+      height: gem(891);
+      background-image: url("@img/main-section-bg.png");
+    }
+    &::before {
+      display: none;
     }
     &__wrap-top {
       width: gem(776);
@@ -171,6 +190,7 @@
       background: var(--white);
     }
     &__wrap-bottom {
+      z-index: 0;
       padding: 0;
       &::before {
         content: none;
@@ -217,6 +237,10 @@
         background-size: contain;
         background-repeat: no-repeat;
       }
+    }
+    .star-wrap {
+      width: gem(88);
+      height: gem(88);
     }
   }
 }

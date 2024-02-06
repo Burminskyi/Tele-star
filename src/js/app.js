@@ -17,6 +17,8 @@ import "swiper/css/effect-fade";
 
 import * as flsFunctions from "./core/functions.js";
 import { scrollToAnchor } from "./modules/scrollToAnchor.js";
+import { openProgram } from "./modules/openProgram.js";
+import { submitForm } from "./modules/submitForm.js";
 // import {headerFixed} from "./modules/index.js";
 import {
   disableScrollAndSwipes,
@@ -52,18 +54,19 @@ flsFunctions.fullVHfix();
 window.addEventListener("load", () => {
   try {
     AOS.init();
-    setupScrollToTop();
-    animateAboutSection();
+    // setupScrollToTop();
+    // animateAboutSection();
     scrollToAnchor();
-    animateConnectSection();
-    animateConnectSectionBottom();
+    // animateConnectSection();
+    // animateConnectSectionBottom();
     headerFixed();
-    initServiceSlider();
-    initCasesSlider();
-    initTelegramSlider();
-
+    // initServiceSlider();
+    // initCasesSlider();
+    // initTelegramSlider();
+    openProgram();
     burger();
     initLoadMore();
+    submitForm();
   } catch (e) {
     console.log(e);
   }

@@ -40,7 +40,7 @@
       object-fit: cover;
     }
   }
-  .tg-btn{
+  .tg-btn {
     display: none;
   }
 }
@@ -64,14 +64,15 @@
       line-height: 120%;
       display: flex;
       flex-direction: column;
-      gap: gem(17);
+      gap: gem(8);
     }
     .author-info-icon {
+      
       width: gem(30);
       height: gem(30);
       svg {
-        width: fit-content;
-        height: fit-content;
+        width: gem(30);
+        height: gem(30);
       }
     }
     .image-wrap {

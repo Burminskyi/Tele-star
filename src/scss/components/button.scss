@@ -7,6 +7,7 @@
   align-items: center;
   font-size: gem(16);
   border-radius: gem(100);
+  transition: all 0.3s;
   &.tg {
     background: var(--black);
     color: var(--white);
@@ -19,6 +20,14 @@
     font-size: gem(20);
     width: gem(150);
     height: gem(42);
+    @media screen and (min-width: 577px) {
+      width: gem(283);
+      height: gem(60);
+      font-size: gem(32);
+    }
+  }
+  &:hover, &:focus{
+    scale: 1.1;
   }
 }
 .btn-wrap {
@@ -30,9 +39,11 @@
   gap: gem(44);
   &.footer-btn {
     position: static;
-    justify-content: space-between;
     padding: 0;
     gap: gem(20);
+    @media screen and (min-width: 577px) {
+      gap: gem(75);
+    }
   }
 }
 

@@ -56,7 +56,7 @@
     font-weight: 500;
     text-align: center;
     margin-bottom: gem(60);
-    &.bottom{
+    &.bottom {
       margin-bottom: gem(46);
     }
   }
@@ -69,8 +69,8 @@
 }
 
 .form-group {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
   input {
     width: gem(320);
     height: gem(54);
@@ -96,39 +96,51 @@
   background: #7dcdff;
   font-size: gem(20);
   font-weight: 600;
-  &.bottom{
+  transition: all 0.3s;
+  &.bottom {
     margin-top: gem(18);
   }
+  &:hover{
+    box-shadow: 0px 4px 20px 0px #FFF;
+  }
+  &:focus{
+    background: #0088CC;
+  }
+  &.disabled {
+    pointer-events: none;
+    background: #8B8B8B;
+    cursor: grab;
+  }
 }
-
 
 @media screen and (min-width: 577px) {
   .form-section {
     padding-top: gem(80);
     padding-bottom: gem(110);
-    .form-header{
+  }
+  .form-header {
+    margin-bottom: gem(34);
+    font-size: gem(60);
+    &__bottom {
+      font-size: gem(20);
       margin-bottom: gem(34);
-      font-size: gem(60);
-      &__bottom{
-        font-size: gem(20);
-        margin-bottom: gem(34);
-      }
     }
-    &__wrap{
-      margin: auto;
-      width: gem(574);
-    }
-    .feedback-form {
-      gap: gem(16);
-    }
-    .form-btn {
-      display: flex;
-      width: gem(574);
-      height: gem(71);
-      margin-top: gem(34);
-      font-size: gem(32);
-    }
-    .form-group {
+  }
+  .form-section__wrap {
+    margin: auto;
+    width: gem(574);
+  }
+  .feedback-form {
+    gap: gem(16);
+  }
+  .form-btn {
+    display: flex;
+    width: gem(574);
+    height: gem(71);
+    margin-top: gem(34);
+    font-size: gem(32);
+  }
+  .form-group {
     input {
       width: gem(574);
       height: gem(71);
@@ -136,20 +148,20 @@
       font-size: gem(32);
     }
   }
-  &__bg1 {
+  .form-section__bg1 {
     height: gem(105);
     width: gem(166);
     top: gem(560);
     right: gem(553);
   }
-  &__bg2 {
+  .form-section__bg2 {
     z-index: 3;
     height: gem(97);
     width: gem(226);
     bottom: gem(190);
     right: gem(1190);
   }
-  &__bg3 {
+  .form-section__bg3 {
     z-index: 3;
     width: gem(483);
     height: gem(539);
@@ -157,8 +169,7 @@
     right: gem(390);
     background-image: url("@img/form-section-bg3-desk.png");
   }
-  &__bg4 {
+  .form-section__bg4 {
     display: none;
-  }
   }
 }
