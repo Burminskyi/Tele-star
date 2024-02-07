@@ -14,6 +14,7 @@
     background-image: url("@img/main-section-bg-mob.png");
     background-size: contain;
     background-repeat: no-repeat;
+    pointer-events: none;
   }
   &::before {
     position: absolute;
@@ -25,6 +26,7 @@
     background-image: url("@img/header-plane-3.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    pointer-events: none;
   }
   &__wrap {
     height: gem(512);
@@ -135,9 +137,10 @@
     margin: 0;
     width: gem(23);
     height: gem(22);
-    background-image: url("@img/star.png");
-    background-size: contain;
-    background-repeat: no-repeat;
+    svg{
+      width: gem(23);
+      height: gem(22);
+    }
   }
 }
 
@@ -241,6 +244,10 @@
     .star-wrap {
       width: gem(88);
       height: gem(88);
+      svg{
+        width: gem(88);
+        height: gem(88);
+      }
     }
   }
 }

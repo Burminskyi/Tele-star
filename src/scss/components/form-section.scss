@@ -13,6 +13,7 @@
     background-image: url("@img/form-section-bg.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    pointer-events: none;
   }
   &__bg2 {
     position: absolute;
@@ -23,6 +24,7 @@
     background-image: url("@img/form-section-bg2.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    pointer-events: none;
   }
   &__bg3 {
     position: absolute;
@@ -33,6 +35,7 @@
     background-image: url("@img/form-section-bg3.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    pointer-events: none;
   }
   &__bg4 {
     position: absolute;
@@ -43,6 +46,7 @@
     background-image: url("@img/form-section-bg4.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    pointer-events: none;
   }
 }
 

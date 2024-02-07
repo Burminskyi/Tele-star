@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="uk" xmlns="http://www.w3.org/1999/html">
-  @@include('html/_head.htm',{ "title":"Traffic Wolves" })
+  @@include('html/_head.htm',{ "title":"Tele-Star &#9733;" })
   <body class="body">
     <div class="page-container">
       @@include('html/_header.htm',{})
@@ -15,7 +15,14 @@
                     <p>Тривалість курсу 7 тижнів</p>
                   </div>
                   <h1 class="main-section__info">
-                    <span>Tele-Star <span class="star-wrap"> </span>: </span>
+                    <span
+                      >Tele-Star
+                      <span class="star-wrap">
+                        <svg>
+                          <use xlink:href="#star-white"></use>
+                        </svg> </span
+                      >:
+                    </span>
                     від 0 до мільйонного бізнесу на ТГ-каналах
                   </h1>
                 </div>
@@ -43,16 +50,32 @@
         </section>
 
         <section id="direction" class="direction-section">
-          <div class="direction-section__bg1"></div>
-          <div class="direction-section__bg2"></div>
-          <div class="direction-section__bg3"></div>
+          <div
+            class="direction-section__bg1 lazy"
+            data-bg="@img/header-tg.png"
+          ></div>
+          <div
+            class="direction-section__bg2 lazy"
+            data-bg="@img/header-tg-2.png"
+          ></div>
+          <div
+            class="direction-section__bg3"
+            data-bg-multi='url("@img/header-tg-3.png") mobile, url("@img/header-tg-2.png") desktop'
+          ></div>
           <div class="container">
             <h2 class="direction-section__info">
               Ви самі обираєте направлення свого навчання у
-              <span>Tele-Star <span class="star-wrap-accent"> </span>: </span>
+              <span
+                >Tele-Star
+                <span class="star-wrap-accent"
+                  ><svg>
+                    <use xlink:href="#star-accent"></use>
+                  </svg> </span
+                >:
+              </span>
             </h2>
             <ul class="direction-section__list">
-              <li class="direction-section__list-item">
+              <li class="direction-section__list-item" data-aos="fade-right" data-aos-once="true">
                 <div class="direction-section__list-item-icon">
                   <svg class="">
                     <use xlink:href="#tg1"></use>
@@ -71,7 +94,7 @@
                   материнством
                 </p>
               </li>
-              <li class="direction-section__list-item">
+              <li class="direction-section__list-item" data-aos="fade-right" data-aos-delay="100" data-aos-once="true">
                 <div class="direction-section__list-item-icon">
                   <svg class="">
                     <use xlink:href="#tg2"></use>
@@ -88,7 +111,7 @@
                   TELEGRAM-агенції Wolves traffic
                 </p>
               </li>
-              <li class="direction-section__list-item">
+              <li class="direction-section__list-item" data-aos="fade-right" data-aos-delay="200" data-aos-once="true">
                 <div class="direction-section__list-item-icon">
                   <svg class="">
                     <use xlink:href="#tg3"></use>
@@ -128,7 +151,7 @@
               <li class="for-whom-section__list-item">
                 <div class="who-is">Шукаєш себе</div>
                 <div class="for-whom-section__list-img">
-                  <img src="@img/b1.png" alt="текст" />
+                  <img class="lazy" data-src="@img/b1.png" alt="текст" />
                 </div>
                 <p class="for-whom-section__list-text">
                   І поки що не знаєш, чим хочеш займатися у житті, але заробляти
@@ -138,7 +161,7 @@
               <li class="for-whom-section__list-item">
                 <div class="who-is">Студент</div>
                 <div class="for-whom-section__list-img">
-                  <img src="@img/b2.png" alt="текст" />
+                  <img class="lazy" data-src="@img/b2.png" alt="текст" />
                 </div>
                 <p class="for-whom-section__list-text">
                   І шукаєш можливість заробляти, поєднуючі свою професійну
@@ -148,7 +171,7 @@
               <li class="for-whom-section__list-item">
                 <div class="who-is">Мама в декреті</div>
                 <div class="for-whom-section__list-img">
-                  <img src="@img/b3.png" alt="текст" />
+                  <img class="lazy" data-src="@img/b3.png" alt="текст" />
                 </div>
                 <p class="for-whom-section__list-text">
                   І хочеш максимум часу приділяти своїй родині, при цьому
@@ -158,7 +181,7 @@
               <li class="for-whom-section__list-item">
                 <div class="who-is">Працюєш в наймі</div>
                 <div class="for-whom-section__list-img">
-                  <img src="@img/b4.png" alt="текст" />
+                  <img class="lazy" data-src="@img/b4.png" alt="текст" />
                 </div>
                 <p class="for-whom-section__list-text">
                   І хочеш мати вільний графік, подорожувати країною та світом і
@@ -168,7 +191,7 @@
               <li class="for-whom-section__list-item">
                 <div class="who-is">Фрилансер</div>
                 <div class="for-whom-section__list-img">
-                  <img src="@img/b5.png" alt="текст" />
+                  <img class="lazy" data-src="@img/b5.png" alt="текст" />
                 </div>
                 <p class="for-whom-section__list-text">
                   І хочеш вивчити ще один вид онлайн заробітку, щоб примножити
@@ -178,7 +201,7 @@
               <li class="for-whom-section__list-item">
                 <div class="who-is big-text">Не маєш великих заощаджень</div>
                 <div class="for-whom-section__list-img">
-                  <img src="@img/b6.png" alt="текст" />
+                  <img class="lazy" data-src="@img/b6.png" alt="текст" />
                 </div>
                 <p class="for-whom-section__list-text">
                   І хочеш навчитися будувати онлайн-бізнес на ТГ-каналах без
@@ -188,7 +211,7 @@
               <li class="for-whom-section__list-item">
                 <div class="who-is">Людина бізнесу</div>
                 <div class="for-whom-section__list-img">
-                  <img src="@img/b7.png" alt="текст" />
+                  <img class="lazy" data-src="@img/b7.png" alt="текст" />
                 </div>
                 <p class="for-whom-section__list-text">
                   І хочеш розібратися у можливостях ринку TELEGRAM та вкласти
@@ -198,7 +221,7 @@
               <li class="for-whom-section__list-item">
                 <div class="who-is">Інвестор</div>
                 <div class="for-whom-section__list-img">
-                  <img src="@img/b8.png" alt="текст" />
+                  <img class="lazy" data-src="@img/b8.png" alt="текст" />
                 </div>
                 <p class="for-whom-section__list-text">
                   І шукаєш надійних партнерів та команду для інвестицій в
@@ -211,10 +234,10 @@
         </section>
 
         <section class="form-section">
-          <div class="form-section__bg1"></div>
-          <div class="form-section__bg2"></div>
-          <div class="form-section__bg3"></div>
-          <div class="form-section__bg4"></div>
+          <div class="form-section__bg1 lazy" data-bg="@img/form-section-bg.png"></div>
+          <div class="form-section__bg2 lazy" data-bg="@img/form-section-bg2.png"></div>
+          <div class="form-section__bg3 lazy" data-bg-multi='url("@img/form-section-bg3.png") mobile, url("@img/form-section-bg3-desk.png") desktop'></div>
+          <div class="form-section__bg4 lazy" data-bg="@img/form-section-bg4.png"></div>
           <div class="container">
             <div class="form-section__wrap">
               <p class="form-header">Заповніть форму</p>
@@ -258,16 +281,16 @@
         </section>
 
         <section id="structure" class="structure-section">
-          <div class="structure-section__bg1"></div>
-          <div class="structure-section__bg2"></div>
-          <div class="structure-section__bg3"></div>
+          <div class="structure-section__bg1 lazy" data-bg-multi='url("@img/structure-section-bg-mob.png") mobile, url("@img/structure-bg-desk.png") desktop'></div>
+          <div class="structure-section__bg2 lazy" data-bg-multi='url("@img/structure-section-bg2-mob.png") mobile, url("@img/structure-bg-desk2.png") desktop'></div>
+          <div class="structure-section__bg3 lazy" data-bg-multi='url("@img/structure-section-bg3-mob.png") mobile, url("@img/structure-bg-desk3.png") desktop'></div>
           <div class="container">
             <h2 class="structure-section__info">
               Як <span>побудоване</span> навчання?
             </h2>
             <ul class="structure-section__list">
-              <li class="structure-section__list-item">
-                <div class="structure-section__list-step-wrap">
+              <li class="structure-section__list-item" data-aos="zoom-in" data-aos-once="true">
+                <div class="structure-section__list-step-wrap" >
                   <div>Крок</div>
                   <div class="number">1</div>
                 </div>
@@ -283,7 +306,7 @@
                   </p>
                 </div>
               </li>
-              <li class="structure-section__list-item">
+              <li class="structure-section__list-item" data-aos="zoom-in" data-aos-delay="50" data-aos-once="true">
                 <div class="structure-section__list-step-wrap">
                   <div>Крок</div>
                   <div class="number">2</div>
@@ -302,7 +325,7 @@
                   </p>
                 </div>
               </li>
-              <li class="structure-section__list-item">
+              <li class="structure-section__list-item" data-aos="zoom-in" data-aos-delay="100" data-aos-once="true">
                 <div class="structure-section__list-step-wrap">
                   <div>Крок</div>
                   <div class="number">3</div>
@@ -319,7 +342,7 @@
                   </p>
                 </div>
               </li>
-              <li class="structure-section__list-item">
+              <li class="structure-section__list-item" data-aos="zoom-in" data-aos-delay="150" data-aos-once="true">
                 <div class="structure-section__list-step-wrap">
                   <div>Крок</div>
                   <div class="number">4</div>
@@ -339,7 +362,7 @@
                   </p>
                 </div>
               </li>
-              <li class="structure-section__list-item">
+              <li class="structure-section__list-item" data-aos="zoom-in" data-aos-delay="200" data-aos-once="true">
                 <div class="structure-section__list-step-wrap">
                   <div>Крок</div>
                   <div class="number">5</div>
@@ -365,7 +388,15 @@
         <section id="program" class="program-section">
           <div class="container">
             <h2 class="program-section__info">
-              Програма навчання <span>Tele-Star :</span>
+              Програма навчання
+              <span
+                >Tele-Star
+                <span class="star-wrap-accent"
+                  ><svg>
+                    <use xlink:href="#star-accent"></use>
+                  </svg> </span
+                >:
+              </span>
             </h2>
             <div class="program-section__wrap">
               <div class="program-info-first-wrap">
@@ -737,11 +768,11 @@
             </ul>
           </div>
 
-          <div class="bonuses">
-            <div class="bonuses__bg1"></div>
-            <div class="bonuses__bg2"></div>
-            <div class="bonuses__bg3"></div>
-            <div class="bonuses__bg4"></div>
+          <div class="bonuses lazy" data-bg-multi='url("@img/bonuses-mob.png") mobile, url("@img/bonuses-bg.png") desktop'>
+            <div class="bonuses__bg1 lazy" data-bg="@img/bonuses-tg.png"></div>
+            <div class="bonuses__bg2 lazy" data-bg="@img/bonuses-tg.png"></div>
+            <div class="bonuses__bg3 lazy" data-bg="@img/bonuses-tg.png"></div>
+            <div class="bonuses__bg4 lazy" data-bg="@img/bonuses-tg.png"></div>
             <div class="container">
               <div class="bonuses__wrap">
                 <div class="bonuses__large">
@@ -764,7 +795,15 @@
         <section id="author" class="author-section">
           <div class="container">
             <h2 class="author-section__info">
-              Автор та ведучий <span>Tele-Star :</span>
+              Автор та ведучий
+              <span
+                >Tele-Star
+                <span class="star-wrap-accent"
+                  ><svg>
+                    <use xlink:href="#star-accent"></use>
+                  </svg> </span
+                >:
+              </span>
             </h2>
             <div class="author-info-container">
               <div class="author-info-wrap">
@@ -842,12 +881,20 @@
         </section>
 
         <section id="book" class="book-section">
-          <div class="book-section__bg1"></div>
-          <div class="book-section__bg2"></div>
-          <div class="book-section__bg3"></div>
+          <div class="book-section__bg1 lazy" data-bg-multi='url("@img/book-section-bg.png") mobile, url("@img/book-section-bg-desk.png") desktop'></div>
+          <div class="book-section__bg2 lazy" data-bg-multi='url("@img/book-section-bg2.png") mobile, url("@img/book-section-bg-desk2.png") desktop'></div>
+          <div class="book-section__bg3 lazy" data-bg-multi='url("@img/book-section-bg3.png") mobile, url("@img/book-section-bg-desk3.png") desktop'></div>
           <div class="container">
             <h2 class="book-section__info">
-              Доступні тарифи <br />навчання <span>Tele-Star :</span>
+              Доступні тарифи навчання
+              <span
+                >Tele-Star
+                <span class="star-wrap-accent"
+                  ><svg>
+                    <use xlink:href="#star-accent"></use>
+                  </svg> </span
+                >:
+              </span>
             </h2>
             <div class="book-section__wrap">
               <div class="book-section__tariff white">
@@ -1029,33 +1076,40 @@
         </section>
 
         <section id="payment" class="payment-section">
-          <div class="payment-section__bg first"></div>
-          <div class="payment-section__bg second"></div>
-          <div class="payment-section__bg third"></div>
-          <div class="payment-section__bg fourth"></div>
-          <div class="payment-section__bg fifth"></div>
-          <div class="payment-section__bg sixth"></div>
-          <div class="payment-section__bg seventh"></div>
+          <div class="payment-section__bg first lazy" data-bg="@img/payment-section-bg.png" data-aos="custom-swing"
+          data-aos-duration="1000"></div>
+          <div class="payment-section__bg second lazy" data-bg="@img/payment-section-bg.png" data-aos="custom-up-down"
+          data-aos-duration="1000"></div>
+          <div class="payment-section__bg third lazy" data-bg="@img/payment-section-bg.png" data-aos="custom-up-down"
+          data-aos-duration="1000"></div>
+          <div class="payment-section__bg fourth lazy" data-bg-mob="@img/payment-section-bg.png" data-aos="custom-swing"
+          data-aos-duration="1000"></div>
+          <div class="payment-section__bg fifth lazy" data-bg="@img/payment-section-bg.png" data-aos="custom-swing"
+          data-aos-duration="1000"></div>
+          <div class="payment-section__bg sixth lazy" data-bg="@img/payment-section-bg.png" data-aos="custom-up-down"
+          data-aos-duration="1000"></div>
+          <div class="payment-section__bg seventh lazy" data-bg="@img/payment-section-bg.png" data-aos="custom-swing"
+          data-aos-duration="1000"></div>
 
           <div class="container">
             <h2 class="payment-section__info"><span>Варіанти</span> оплат:</h2>
             <ul class="payment-section__list">
-              <li class="payment-section__list-item">
+              <li class="payment-section__list-item" data-aos="fade-down-right" data-aos-once="true">
                 <span class="first">01</span>
                 <p>Попереднє бронювання місця на навчання 1000 гривень</p>
               </li>
-              <li class="payment-section__list-item">
+              <li class="payment-section__list-item" data-aos="fade-down-left" data-aos-once="true">
                 <span class="second">02</span>
                 <p>
                   Внутрішня розстрочка:<br />
                   2 рівними частинами
                 </p>
               </li>
-              <li class="payment-section__list-item">
+              <li class="payment-section__list-item" data-aos="fade-up-right" data-aos-once="true">
                 <span class="other full">03</span>
                 <p>Повна оплата</p>
               </li>
-              <li class="payment-section__list-item">
+              <li class="payment-section__list-item" data-aos="fade-up-left" data-aos-once="true">
                 <span class="other">04</span>
                 <p>Безвідсоткова банківська розстрочка</p>
               </li>

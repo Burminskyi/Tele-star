@@ -158,6 +158,7 @@
     background-image: url("@img/book-section-bg.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    pointer-events: none;
   }
   &__bg2 {
     position: absolute;
@@ -168,6 +169,7 @@
     background-image: url("@img/book-section-bg2.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    pointer-events: none;
   }
   &__bg3 {
     position: absolute;
@@ -178,6 +180,7 @@
     background-image: url("@img/book-section-bg3.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    pointer-events: none;
   }
 }
 
@@ -189,7 +192,9 @@
     &__info{
       margin-bottom: gem(62);
       text-align: start;
-      font-size: gem(70);
+      font-size: gem(60);
+      span{font-size: gem(70);}
+      
     }
     &__wrap{
       display: flex;
@@ -250,6 +255,27 @@
     .price-wrap{
       display: flex;
       flex-direction: column-reverse;
+    }
+    &__bg1 {
+      width: gem(200);
+      height: gem(130);
+      top: gem(230);
+      left: gem(1170);
+      background-image: url("@img/book-section-bg-desk.png");
+    }
+    &__bg2 {
+      width: gem(180);
+      height: gem(79);
+      top: gem(990);
+      right: gem(1180);
+      background-image: url("@img/book-section-bg-desk2.png");
+    }
+    &__bg3 {
+      width: gem(250);
+      height: gem(110);
+      bottom: gem(300);
+      left: gem(1170);
+      background-image: url("@img/book-section-bg-desk3.png");
     }
   }
 }

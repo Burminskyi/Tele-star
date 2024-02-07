@@ -89,6 +89,7 @@
     background-image: url("@img/structure-section-bg-mob.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    pointer-events: none;
   }
   &__bg2 {
     position: absolute;
@@ -99,6 +100,7 @@
     background-image: url("@img/structure-section-bg2-mob.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    pointer-events: none;
   }
   &__bg3 {
     position: absolute;
@@ -109,6 +111,7 @@
     background-image: url("@img/structure-section-bg3-mob.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    pointer-events: none;
   }
 }
 
@@ -165,6 +168,27 @@
       &.bold{
         font-size: gem(22);
       }
+    }
+    &__bg1 {
+      height: gem(523.2);
+      width: gem(632.4);
+      top: gem(150);
+      right: 0;
+      background-image: url("@img/structure-bg-desk.png");
+    }
+    &__bg2 {
+      height: gem(796);
+      width: gem(1027);
+      top: gem(50);
+      left: 0;
+      background-image: url("@img/structure-bg-desk2.png");
+    }
+    &__bg3 {
+      width: gem(350);
+      height: gem(350);
+      top: gem(690);
+      left: gem(750);
+      background-image: url("@img/structure-bg-desk3.png");
     }
   }
 }

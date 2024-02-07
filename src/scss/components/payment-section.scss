@@ -66,6 +66,7 @@
     background-image: url("@img/payment-section-bg.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    pointer-events: none;
     &.first {
       width: gem(111);
       height: gem(85);
@@ -169,5 +170,93 @@
 
       margin-bottom: gem(28);
     }
+
+    &__bg {
+      &.first {
+        z-index: 2;
+        width: gem(333);
+        height: gem(255);
+        top: gem(320);
+        left: gem(1280);
+      }
+      &.second {
+        z-index: 2;
+        transform: rotate(180deg);
+        width: gem(266);
+        height: gem(204);
+        top: gem(50);
+        right: gem(850);
+      }
+      &.third {
+        z-index: 2;
+        transform: rotate(146deg);
+        width: gem(160);
+        height: gem(130);
+        top: gem(850);
+        right: gem(675);
+      }
+      &.fourth {
+       display: none;
+      }
+      &.fifth {
+        z-index: 2;
+        width: gem(555);
+        height: gem(425);
+        bottom: gem(990);
+        right: gem(1120);
+        transform: rotate(-30deg);
+      }
+      &.sixth {
+        z-index: 3;
+        width: gem(155.4);
+        height: gem(119);
+        bottom: gem(100);
+        right: gem(580);
+        transform: rotate(15deg);
+      }
+      &.seventh {
+        z-index: 3;
+        width: gem(333);
+        height: gem(255);
+        top: gem(1250);
+        left: gem(480);
+        transform: rotate(15deg);
+      }
+    }
+
+
   }
+  
+}
+
+@keyframes customSwing {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-2deg);
+  }
+  100% {
+    transform: rotate(2deg);
+  }
+}
+
+[data-aos="custom-swing"] {
+  animation: customSwing 1s ease-in-out infinite alternate;
+}
+
+@keyframes customUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+[data-aos="custom-up-down"] {
+  animation: customUpDown 1s ease-in-out infinite;
 }

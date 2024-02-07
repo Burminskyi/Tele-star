@@ -4,12 +4,13 @@
   padding-top: gem(40);
 
   &__info {
-    font-family: Inter;
     margin: auto;
     text-align: center;
     margin-bottom: gem(20);
+    width: gem(205);
     span {
-      display: block;
+      font-family: Inter;
+      display: inline-block;
       color: var(--accent);
     }
   }
@@ -50,8 +51,14 @@
     padding-top: gem(55);
     padding-bottom: gem(140);
     &__info {
+      margin-left: 0;
       text-align: start;
       margin-bottom: gem(70);
+      width: gem(525);
+      font-size: gem(60);
+      span{
+        font-size: gem(70);
+      }
     }
     .author-info-container {
       width: gem(782);

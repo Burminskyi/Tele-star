@@ -64,11 +64,19 @@ h1 h2 h3 h4 h5 h6 {
   margin: 0;
   width: gem(14);
   height: gem(14);
-  background-image: url("@img/accent-star.png");
-  background-size: contain;
-  background-repeat: no-repeat;
+  &.block-text{
+    display: flex;
+  }
+  svg{
+    width: gem(14);
+  height: gem(14);
+  }
   @media screen and (min-width: 577px) {
     width: gem(48);
     height: gem(46);
+    svg{
+      width: gem(48);
+      height: gem(46);
+    }
   }
 }

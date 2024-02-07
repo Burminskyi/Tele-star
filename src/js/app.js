@@ -1,6 +1,7 @@
 // Увімкнути/вимкнути FLS (Full Logging System) (в роботі)
 import AOS from "aos";
 import "aos/dist/aos.css";
+import LazyLoad from "vanilla-lazyload";
 
 import burger from "./modules/burger.js";
 import animateAboutSection from "./modules/animateAboutSection.js";
@@ -33,6 +34,10 @@ import {
   initCasesSlider,
   initTelegramSlider,
 } from "./modules/sliders.js";
+
+const lazyLoadInstance = new LazyLoad({
+  elements_selector: ".lazy",
+});
 
 /* Перевірка підтримки webp, додавання класу webp або no-webp для HTML */
 /* (i) необхідно для коректного відображення webp із css */
@@ -67,6 +72,7 @@ window.addEventListener("load", () => {
     burger();
     initLoadMore();
     submitForm();
+    lazyLoadInstance.update();
   } catch (e) {
     console.log(e);
   }

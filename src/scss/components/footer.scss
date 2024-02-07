@@ -65,6 +65,7 @@
     background-image: url("@img/footer-bg.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    pointer-events: none;
   }
   &__bg2 {
     position: absolute;
@@ -75,6 +76,7 @@
     background-image: url("@img/book-section-bg2.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    pointer-events: none;
   }
   &__bg3 {
     position: absolute;
@@ -85,6 +87,7 @@
     background-image: url("@img/book-section-bg3.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    pointer-events: none;
   }
 }
 
@@ -130,6 +133,11 @@
     }
     &__bottom-wrap{
       font-size: gem(20);
+    }
+    &__bg1,
+    &__bg2,
+    &__bg3 {
+      display: none;
     }
   }
 }
