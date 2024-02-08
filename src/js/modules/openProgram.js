@@ -8,6 +8,9 @@ export const openProgram = () => {
         const lessonContent = lessonContainer.querySelector(
           ".program-section__lesson-content"
         );
+        const lessonNumber = lessonContainer.querySelector(
+          ".lesson-block-number"
+        );
 
         const isActive = lessonContent.classList.contains("active");
 
@@ -18,6 +21,7 @@ export const openProgram = () => {
               <use xlink:href="#open"></use>
             </svg>
           `;
+          lessonNumber.style.backgroundColor = "";
         } else {
           lessonContent.classList.add("active");
           button.innerHTML = `
@@ -25,6 +29,7 @@ export const openProgram = () => {
               <use xlink:href="#close-list"></use>
             </svg>
           `;
+          lessonNumber.style.backgroundColor = "#0A0A0A";
         }
       }
     });

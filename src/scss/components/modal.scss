@@ -1,0 +1,64 @@
+.modal {
+  background: rgba(128, 128, 128, 0.9); /* Задаем полупрозрачный цвет фона */
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  &.active {
+    display: block;
+  }
+}
+
+.modal__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.modal__body {
+  position: relative;
+  padding: gem(30) gem(20);
+  background-color: var(--black);
+  border-radius: 8px;
+  @media screen and (min-width: 577px) {
+    padding: gem(50) gem(30);
+  }
+}
+
+.modal__close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: gem(16);
+  height: gem(16);
+  position: absolute;
+  top: gem(15);
+  right: gem(15);
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  transition: transform 0.3s ease;
+  svg {
+    width: gem(16);
+    height: gem(16);
+  }
+  &:hover{
+    scale: 1.2;
+  }
+
+  @media screen and (min-width: 577px) {
+    width: gem(26);
+    height: gem(26);
+    top: gem(20);
+    right: gem(20);
+    svg {
+      width: gem(26); // Вероятно, должно быть rem(26) вместо gem(26)
+      height: gem(26); // Вероятно, должно быть rem(26) вместо gem(26)
+    }
+  }
+}

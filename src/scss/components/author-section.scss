@@ -35,14 +35,43 @@
   .image-wrap {
     width: gem(360);
     height: gem(483);
+    margin-top: gem(-30);
     img {
-      width: 100%;
-      height: 100%;
+      bottom: gem(8);
+      left: gem(-35);
+      position: relative;
+      width: 120%;
+      height: 120%;
       object-fit: cover;
     }
   }
   .tg-btn {
-    display: none;
+    position: absolute;
+    bottom: gem(110);
+    right: gem(20);
+    display: flex;
+    align-items: center;
+    width: gem(320);
+    height: gem(46);
+    border-radius: 100px;
+    background: #fff;
+    backdrop-filter: blur(13px);
+    padding-top: gem(14.5);
+    padding-bottom: gem(14.5);
+    padding-left: gem(60);
+    color: var(--accent);
+    font-size: gem(24);
+    font-style: italic;
+    &::before {
+      position: absolute;
+      content: "";
+      width: gem(38);
+      height: gem(38);
+      left: gem(5);
+      background-image: url("@img/telegram.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
   }
 }
 
@@ -56,7 +85,7 @@
       margin-bottom: gem(70);
       width: gem(525);
       font-size: gem(60);
-      span{
+      span {
         font-size: gem(70);
       }
     }
@@ -74,7 +103,6 @@
       gap: gem(8);
     }
     .author-info-icon {
-      
       width: gem(30);
       height: gem(30);
       svg {
@@ -83,39 +111,31 @@
       }
     }
     .image-wrap {
+      margin: 0;
       position: absolute;
-      content: url("@img/author-section.png");
       width: gem(1200);
       height: auto;
-      bottom: gem(-210);
+      bottom: gem(-225);
       right: gem(-140);
+      img {
+        width: 100%;
+        height: 100%;
+      }
     }
     .tg-btn {
-      position: absolute;
       bottom: gem(215);
       right: gem(615);
-      display: flex;
-      align-items: center;
       width: gem(600);
       height: gem(85);
-      border-radius: 100px;
-      background: #fff;
-      backdrop-filter: blur(13px);
       padding-top: gem(25);
       padding-bottom: gem(25);
       padding-left: gem(104);
-      color: var(--accent);
       font-size: gem(48);
-      font-style: italic;
       &::before {
-        position: absolute;
         content: "";
         width: gem(71);
         height: gem(71);
         left: gem(8);
-        background-image: url("@img/telegram.svg");
-        background-size: contain;
-        background-repeat: no-repeat;
       }
     }
   }

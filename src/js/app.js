@@ -5,10 +5,12 @@ import LazyLoad from "vanilla-lazyload";
 
 import burger from "./modules/burger.js";
 import animateAboutSection from "./modules/animateAboutSection.js";
-import {animateConnectSection, animateConnectSectionBottom} from "./modules/animateConnectSection.js";
+import {
+  animateConnectSection,
+  animateConnectSectionBottom,
+} from "./modules/animateConnectSection.js";
 import { setupScrollToTop } from "./modules/scrollToTop.js";
 import { initLoadMore } from "./modules/loadMore.js";
-
 
 window["FLS"] = true;
 // Підключення основного файлу стилів
@@ -20,6 +22,7 @@ import * as flsFunctions from "./core/functions.js";
 import { scrollToAnchor } from "./modules/scrollToAnchor.js";
 import { openProgram } from "./modules/openProgram.js";
 import { submitForm } from "./modules/submitForm.js";
+import { myModal } from "./modules/modal.js";
 // import {headerFixed} from "./modules/index.js";
 import {
   disableScrollAndSwipes,
@@ -73,6 +76,7 @@ window.addEventListener("load", () => {
     initLoadMore();
     submitForm();
     lazyLoadInstance.update();
+    myModal();
   } catch (e) {
     console.log(e);
   }

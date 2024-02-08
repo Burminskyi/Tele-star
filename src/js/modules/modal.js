@@ -1,101 +1,70 @@
-class Modal {
-    constructor(selector) {
-        this.modal = document.querySelector(selector);
-        this.modalBody = this.modal.querySelector(".modal__body");
-        this.scrollPosition = scrollY || document.documentElement.scrollTop;
+export const myModal = () => {
+    const connectButtons = document.querySelectorAll(".connect-btn");
+    const modal = document.querySelector(".modal");
+    const body = document.querySelector("body"); // Получаем элемент body
+    const modalBody = document.querySelector(".modal__body"); // Получаем элемент modalBody
+
+    const closeButton = document.querySelector(".modal__close");
+  
+    function openModal(event) {
+        event.stopPropagation(); // Предотвращаем всплытие события клика
+        modal.style.display = "block";
+        body.classList.add("active"); // Добавляем класс для запрета прокрутки
+        document.addEventListener("keydown", handleEscapeKey);
+        document.addEventListener("click", handleClickOutsideModal); // Добавляем обработчик клика за пределами модалки
+      }
+     function closeModal() {
+        modal.style.display = "none";
+        body.classList.remove("active"); // Удаляем класс для восстановления прокрутки
+        document.removeEventListener("keydown", handleEscapeKey);
+        document.removeEventListener("click", handleClickOutsideModal); // Удаляем обработчик клика за пределами модалки
+      }
+  
+    function handleEscapeKey(event) {
+      if (event.key === "Escape") {
+        closeModal();
+      }
     }
-
-    openModal() {
-        this.modal.classList.add("show");
-        this.modal.classList.remove("hide");
-        document.body.classList.add("overlay");
-        this.attachModalEvents(this.modal);
+    
+    function handleClickOutsideModal(event) {
+      if (!modalBody.contains(event.target) && event.target !== connectButtons[0]) { // Проверяем, что клик был вне модалки и не на кнопке открытия модалки
+        closeModal();
+      }
     }
-    attachModalEvents() {
-        if (this.modal.querySelector(".modal__close")) {
-            this.modal
-                .querySelectorAll(".modal__close").forEach(closeBtn => {
-                closeBtn.addEventListener("click", () => {
-                    this.closeModal(this.modal);
-                });
-            })
+  
+    connectButtons.forEach((button) => {
+      button.addEventListener("click", openModal);
+    });
+  
+    closeButton.addEventListener("click", closeModal);
+};
 
-        }
+export const closeModal = () => {
+    const modal = document.querySelector(".modal");
+    const body = document.querySelector("body");
+    const connectButtons = document.querySelectorAll(".connect-btn");
+    const modalBody = document.querySelector(".modal__body");
 
-        document.addEventListener("keydown", (e) => {
-            this.handleEscape(e);
-        });
-        this.disableScrollAndSwipes();
-        this.modal.addEventListener("click", (e) => {
-            this.handleOutside(e);
-        });
-    }
+    // Скрываем модальное окно
+    modal.style.display = "none";
 
-    closeModal() {
-        this.enableScrollAndSwipes()
+    // Удаляем класс для восстановления прокрутки
+    body.classList.remove("active");
 
+    // Удаляем обработчики событий
+    document.removeEventListener("keydown", handleEscapeKey);
+    document.removeEventListener("click", handleClickOutsideModal);
 
-        setTimeout(() => {
-            this.modal.classList = "modal";
-            this.modal.classList.add("hide");
-            this.modal.classList.remove("show");
-            // getElement('.modal__content', this.modal).classList = 'modal__content w-100';
-            document.body.classList.remove("overlay");
-        }, 0);
-
-        this.detachModalEvents(this.modal);
-
-        setTimeout(() => {
-            this.modalBody.firstElementChildinnerHTML = ``;
-        }, 250);
-    }
-
-    detachModalEvents() {
-
-        if (this.modal.querySelector(".modal__close")) {
-            this.modal
-                .querySelectorAll(".modal__close").forEach(closeBtn => {
-                closeBtn.removeEventListener("click", () => {
-                    this.closeModal(this.modal);
-                });
-            });
-        }
-        document.removeEventListener("keydown", (e) => {
-            this.handleEscape(e);
-        });
-
-        this.modal.removeEventListener("click", (e) => {
-            this.handleOutside(e);
-        });
-    }
-
-    handleEscape(event) {
+    function handleEscapeKey(event) {
         if (event.key === "Escape") {
-            this.closeModal(this.modal);
+            closeModal();
         }
     }
 
-    handleOutside(event) {
-        const isClickOutside = !!event.target.closest(".modal__body");
-        if (!isClickOutside) {
-            this.closeModal(this.modal);
+    function handleClickOutsideModal(event) {
+        if (!modalBody.contains(event.target) && event.target !== connectButtons[0]) { // Проверяем, что клик был вне модалки и не на кнопке открытия модалки
+            closeModal();
         }
     }
+};
 
-    disableScrollAndSwipes() {
-        document.body.style.position = 'fixed';
-        document.body.style.top = `-${this.scrollPosition}px`;
-    }
-
-    enableScrollAndSwipes() {
-        document.body.style.position = 'relative';
-        document.body.style.top = '0';
-        window.scrollTo(0, this.scrollPosition);
-
-    }
-
-
-}
-
-
-export default Modal;

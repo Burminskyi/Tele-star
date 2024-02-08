@@ -1,2 +1,53 @@
-<div data-fullscreen class="modal hide ">
+<div class="modal">
+  <div class="modal__wrap">
+    <div class="modal__body">
+      <div
+        class="modal__content w-100 flex --dir-col --align-center --just-center"
+      >
+        <div class="form-section__wrap">
+          <p class="form-header">Заповніть форму</p>
+          <p class="form-header__bottom">
+            (І отримайте безкоштовну консультацію)
+          </p>
+          <form class="feedback-form">
+            <div class="form-group">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Ваше ім’я"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Ваш номер телефону"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                id="telegram"
+                name="telegram"
+                placeholder="Нік в телеграмі"
+                required
+              />
+            </div>
+            <button class="form-btn" type="submit">
+              Отримати консультацію
+            </button>
+          </form>
+        </div>
+      </div>
+      <button type="button" class="modal__close pos-a">
+        <svg>
+            <use xlink:href="#close"></use>
+          </svg>
+      </button>
+    </div>
+  </div>
 </div>

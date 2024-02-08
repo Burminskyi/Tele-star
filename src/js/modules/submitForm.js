@@ -1,3 +1,5 @@
+import { closeModal } from './modal.js'; // Импортируем функцию closeModal из модуля modal.js
+
 export const submitForm = () => {
     // Получаем все формы с классом .feedback-form
     const forms = document.querySelectorAll('.feedback-form');
@@ -29,6 +31,7 @@ export const submitForm = () => {
                 if (response.ok) {
                     alert("Вашу форму відправлено! Наші менеджери незабаром зв'яжуться з вами.");
                     event.target.reset(); // Очищаем форму после успешной отправки
+                    closeModal(); // Закрываем модальное окно после успешной отправки
                 } else {
                     throw new Error('Помилка при відправці форми');
                 }

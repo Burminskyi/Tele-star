@@ -90,7 +90,7 @@ body {
   }
 
   &.active {
-    overflow: hidden;
+    overflow: hidden!important;
     touch-action: none;
 
 
