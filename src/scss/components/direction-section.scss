@@ -24,6 +24,20 @@
     padding: gem(15) gem(8) gem(27) gem(65);
     border-radius: gem(20);
     box-shadow: -4px 7px 16px 0px rgba(0, 0, 0, 0.25);
+    &.business {
+      position: relative;
+      &::after{
+        position: absolute;
+        content: "";
+        width: gem(9);
+        height: gem(200);
+        left: gem(40);
+        bottom: gem(55);
+        background-image: url("@img/line.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+    }
     span {
       color: var(--accent);
       font-weight: 700;
@@ -107,12 +121,11 @@
   }
 }
 
-
 @media screen and (min-width: 577px) {
-  .direction-section{
+  .direction-section {
     padding-top: gem(125);
     padding-bottom: gem(185);
-    &__info{
+    &__info {
       margin: auto;
       text-align: center;
       font-size: gem(70);
@@ -120,17 +133,25 @@
       line-height: normal;
       margin-bottom: gem(180);
     }
-    &__list{
+    &__list {
       flex-direction: row;
       justify-content: space-between;
     }
-    &__list-item{
+    &__list-item {
       width: gem(486);
       height: gem(490);
       padding: gem(35) gem(40) gem(27) gem(125);
       font-size: gem(20);
+      &.business {
+        &::after{
+          width: gem(9);
+          height: gem(300);
+          left: gem(90);
+          bottom: gem(50);
+        }
+      }
     }
-    &__list-item-head{
+    &__list-item-head {
       font-size: gem(36);
       line-height: 120%;
       margin-bottom: gem(50);
@@ -144,11 +165,11 @@
       width: gem(64);
       height: gem(65);
       svg {
-       width: gem(64);
+        width: gem(64);
         height: gem(65);
       }
     }
-    &__list-item-number{
+    &__list-item-number {
       left: gem(420);
       font-size: gem(18);
     }

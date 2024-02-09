@@ -1,5 +1,5 @@
 .structure-section {
-    position: relative;
+  position: relative;
   background: var(--black);
   color: var(--white);
   padding-top: gem(36);
@@ -71,13 +71,12 @@
     box-shadow: -4px 4px 3px 0px rgba(0, 0, 0, 0.25);
     color: var(--black);
     font-weight: 400;
-    &.bold{
+    &.bold {
+      span {
+        display: block;
         font-size: gem(16);
-        font-weight: 700;
-        span{
-            display: block;
-            color: var(--white);
-        }
+        color: var(--white);
+      }
     }
   }
   &__bg1 {
@@ -119,14 +118,14 @@
   .structure-section {
     padding-top: gem(105);
     padding-bottom: gem(95);
-    &__info{
+    &__info {
       font-size: gem(60);
       text-align: start;
       margin-left: 0;
       width: gem(445);
       margin-bottom: gem(64);
     }
-    &__list{
+    &__list {
       flex-direction: row;
       flex-wrap: wrap;
       column-gap: gem(20);
@@ -137,18 +136,18 @@
       width: gem(573);
       gap: gem(15);
     }
-    &__list-step-wrap{
+    &__list-step-wrap {
       width: gem(198);
       height: gem(48);
       font-size: gem(24);
       padding-left: gem(22);
       padding-right: gem(5);
-      .number{
+      .number {
         width: gem(41);
         height: gem(41);
       }
     }
-    &__list-info{
+    &__list-info {
       height: gem(112);
       font-size: gem(24);
       padding: gem(12) gem(26);
@@ -157,7 +156,7 @@
       align-items: center;
       line-height: 100%;
     }
-    &__list-description{
+    &__list-description {
       height: gem(174);
       padding-left: gem(24);
       padding-right: gem(24);
@@ -165,8 +164,11 @@
       justify-content: center;
       align-items: center;
       font-size: gem(18);
-      &.bold{
-        font-size: gem(22);
+      &.bold {
+        span {
+          display: inline-block;
+          font-size: gem(22);
+        }
       }
     }
     &__bg1 {
