@@ -10,6 +10,8 @@
 		"start": "npm i --legacy-peer-deps",
 		"dev": "gulp && webpack serve --progress -c config/webpack.dev.js",
 		"build": "gulp build --build",
+		"predeploy": "npm run build",
+		"homepage": "https://burminskyi.github.io/Tele-star/",
 		"sprite": "gulp sprite",
 		"fonts": "gulp fonts --rewrite",
 		"deploy": "gh-pages -d dist", 
