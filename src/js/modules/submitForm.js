@@ -30,8 +30,8 @@ export const submitForm = () => {
                 });
                 if (response.ok) {
                     alert("Вашу форму відправлено! Наші менеджери незабаром зв'яжуться з вами.");
-                    event.target.reset(); // Очищаем форму после успешной отправки
-                    closeModal(); // Закрываем модальное окно после успешной отправки
+                    event.target.reset();
+                    closeModal();
                 } else {
                     throw new Error('Помилка при відправці форми');
                 }
@@ -39,10 +39,8 @@ export const submitForm = () => {
                 console.error('Сталася помилка:', error);
                 alert('Сталася помилка при відправці форми. Будь ласка, спробуйте ще раз.');
             } finally {
-                // Возвращаем исходный текст кнопки
                 submitButton.textContent = originalButtonText;
                 
-                // Удаляем класс disabled с кнопки независимо от результата
                 submitButton.classList.remove('disabled');
             }
         });
